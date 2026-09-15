@@ -1,0 +1,18 @@
+# LLM & VLM Provider Configuration
+# Seamless toggle between development (cloud API) and defense evaluation (fully sovereign offline)
+active: "local"   # "local" | "groq"
+
+providers:
+  groq:
+    api_key_env: "GROQ_API_KEY"
+    model: "qwen-2.5-32b"
+    vision_model: "llama-3.2-11b-vision-preview"
+    timeout_sec: 10
+    temperature: 0.1
+
+  local:
+    provider_type: "offline_deterministic" # Options: vllm, llama_cpp, offline_deterministic
+    endpoint: "http://localhost:8080/v1"
+    model_name: "qwen2.5-vl-7b-instruct"
+    context_length: 4096
+    use_template_parser_fallback: true

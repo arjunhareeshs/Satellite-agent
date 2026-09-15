@@ -1,0 +1,26 @@
+name: "delhi_ncr_yamuna"
+version: 1
+description: "Yamuna river corridor and Delhi-NCR region for SIH26227 evaluation"
+working_crs: "EPSG:32643"  # WGS 84 / UTM zone 43N
+storage_crs: "EPSG:4326"   # WGS 84 geographic coordinates
+bounds:
+  min_lon: 77.10
+  min_lat: 28.50
+  max_lon: 77.35
+  max_lat: 28.72
+center:
+  lon: 77.225
+  lat: 28.610
+polygon_coordinates:
+  - [77.10, 28.50]
+  - [77.35, 28.50]
+  - [77.35, 28.72]
+  - [77.10, 28.72]
+  - [77.10, 28.50]
+area_km2: 538.2
+mgrs_tiles:
+  - "43RFG"
+  - "43RFH"
+temporal_window:
+  start: "2024-01-01"
+  end: "2025-12-31"

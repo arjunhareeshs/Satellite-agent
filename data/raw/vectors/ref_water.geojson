@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "name": "ref_water",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ref_id": "WTR_YAMUNA_MAIN",
+        "name": "Yamuna River",
+        "kind": "river"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.215, 28.720],
+          [77.228, 28.690],
+          [77.240, 28.660],
+          [77.248, 28.630],
+          [77.255, 28.590],
+          [77.280, 28.550],
+          [77.310, 28.510]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ref_id": "WTR_NAJAFGARH_DRAIN",
+        "name": "Najafgarh Canal",
+        "kind": "canal"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.110, 28.650],
+          [77.160, 28.670],
+          [77.210, 28.700],
+          [77.230, 28.710]
+        ]
+      }
+    }
+  ]
+}

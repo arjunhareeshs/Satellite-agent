@@ -1,0 +1,18 @@
+# TRINETRA Ranking Weights
+# Tunable configuration - never hardcoded in logic
+weights:
+  semantic: 0.30       # RemoteCLIP text<->image cosine similarity
+  visual: 0.20         # Prithvi visual feature cosine similarity (image-to-image)
+  temporal: 0.25       # Break confidence * observation persistence length
+  spatial: 0.15        # (1.0 - normalized distance to spatial relation target)
+  sensor: 0.10         # Dual-witness cross-sensor agreement score (S1 SAR + S2 Optical)
+
+thresholds:
+  min_final_score: 0.40
+  min_change_confidence: 0.60
+  conformal_tau: 0.72  # false-alarm rate <= 10% with 95% coverage
+
+rocchio:
+  alpha: 1.0           # original query weight
+  beta: 0.75           # positive feedback centroid weight
+  gamma: 0.25          # negative feedback centroid weight

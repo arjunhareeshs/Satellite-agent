@@ -1,0 +1,40 @@
+{
+  "ground_truth": [
+    {
+      "entity_id": "BLDG_004281",
+      "true_change": true,
+      "true_break_date": "2024-08-15",
+      "change_type": "construction"
+    },
+    {
+      "entity_id": "BLDG_004282",
+      "true_change": true,
+      "true_break_date": "2024-10-10",
+      "change_type": "construction"
+    },
+    {
+      "entity_id": "BLDG_004283",
+      "true_change": true,
+      "true_break_date": "2024-04-05",
+      "change_type": "construction"
+    },
+    {
+      "entity_id": "ROAD_001920",
+      "true_change": true,
+      "true_break_date": "2024-09-10",
+      "change_type": "road_development"
+    },
+    {
+      "entity_id": "NEG_FLOODPLAIN_01",
+      "true_change": false,
+      "true_break_date": null,
+      "change_type": "no_change"
+    },
+    {
+      "entity_id": "NEG_HARVEST_02",
+      "true_change": false,
+      "true_break_date": null,
+      "change_type": "no_change"
+    }
+  ]
+}

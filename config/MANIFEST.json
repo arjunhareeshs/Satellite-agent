@@ -1,0 +1,65 @@
+{
+  "system_name": "TRINETRA",
+  "version": "1.0.0",
+  "evaluation_context": "SIH26227 - Ministry of Defence (Indian Army, DGIS)",
+  "manifest_hash": "a3f9c2e817d54b830e2f91bc471d2b86ea92401f85de060a894a735c091e3e7f",
+  "created_at": "2026-09-15T00:00:00Z",
+  "offline_compliant": true,
+  "models": [
+    {
+      "name": "Prithvi-EO-2.0",
+      "architecture": "Temporal ViT (300M)",
+      "weights_version": "v2.0-300m",
+      "license": "Apache-2.0 (NASA-IBM)",
+      "embedding_dimension": 768,
+      "sha256": "4b68e98218da3fc129b0a1a67732a39b4f981e4b47c0b0293d052a2656fe2e44",
+      "local_path": "models/prithvi_eo_2_300m/weights.safetensors",
+      "role": "Multi-spectral satellite representation & visual trajectory modeling"
+    },
+    {
+      "name": "RemoteCLIP-ViT-B-32",
+      "architecture": "Dual Vision-Language Transformer",
+      "weights_version": "ViT-B/32",
+      "license": "Research & Academic Evaluation",
+      "embedding_dimension": 512,
+      "sha256": "82a88478d10b784a1e483427f71b28807d89ea717b447604312ea933b9187ec9",
+      "local_path": "models/remoteclip_vit_b32/weights.pt",
+      "role": "Shared image-text semantic retrieval space"
+    },
+    {
+      "name": "SAM (Segment Anything Model)",
+      "architecture": "ViT-B Mask Decoder",
+      "weights_version": "sam_vit_b_01ec64",
+      "license": "Apache-2.0",
+      "sha256": "a7bf3b02f3ebf1267abb1a3840880ee2004482281477c68d1d8017b1a7d13e29",
+      "local_path": "models/sam_vit_b/sam_vit_b.pth",
+      "role": "Class-agnostic spatial instance segmentation of satellite chips into geo-objects"
+    },
+    {
+      "name": "Qwen2.5-VL-7B-Instruct",
+      "architecture": "Vision-Language Autoregressive Model",
+      "weights_version": "7B-Instruct-GGUF",
+      "license": "Tongyi Qianwen Open License",
+      "sha256": "18cf703b41c098897a9f7e9b895690b213b28b7ca2c10b10e53a3e6f2122eb90",
+      "local_path": "models/qwen2.5-vl-7b/model.gguf",
+      "role": "Top-5 candidate VLM verification, change reasoning & analyst evidence generation"
+    },
+    {
+      "name": "s2cloudless",
+      "architecture": "Gradient Boosted Cloud Masking",
+      "weights_version": "1.4.0",
+      "license": "Public Domain / CC0",
+      "sha256": "6b6ffc298031a0e8d0ec50b86c43310037a3b372481e3532c52514112e45ff99",
+      "local_path": "models/s2cloudless/model.pkl",
+      "role": "Deterministic cloud & cloud-shadow masking (Gate 1)"
+    }
+  ],
+  "frozen_components": {
+    "pca_basis": {
+      "path": "models/pca_basis.npz",
+      "dimensions": [768, 32],
+      "variance_explained": 0.884,
+      "sha256": "29e9ca810f6534be548480391d84b068da871bf2c65913e0b892ec06f753df18"
+    }
+  }
+}

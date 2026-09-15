@@ -1,0 +1,26 @@
+[
+  {
+    "query_id": "eval_q01",
+    "query_text": "Find new structures within 500 m of a river between 2024 and 2025",
+    "target_entity_type": "building",
+    "relation": "near_water",
+    "distance_m": 500.0,
+    "expected_ids": ["BLDG_004281", "BLDG_004282", "BLDG_004283"]
+  },
+  {
+    "query_id": "eval_q02",
+    "query_text": "Locate new road developments near the Yamuna river",
+    "target_entity_type": "road",
+    "relation": "near_water",
+    "distance_m": 500.0,
+    "expected_ids": ["ROAD_001920"]
+  },
+  {
+    "query_id": "eval_q03",
+    "query_text": "Identify commercial buildings built in late 2024",
+    "target_entity_type": "building",
+    "relation": null,
+    "distance_m": null,
+    "expected_ids": ["BLDG_004282"]
+  }
+]

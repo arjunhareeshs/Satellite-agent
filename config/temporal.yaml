@@ -1,0 +1,17 @@
+# TRINETRA Temporal Engine Constants
+# Based on CCDC/BFAST harmonic seasonal model & CUSUM break detection
+constants:
+  lambda_forgetting: 0.98   # Forgetting factor for Recursive Least Squares (RLS)
+  k_drift: 0.5              # CUSUM slack: absorbs ordinary phenological & sun angle noise
+  h_threshold: 4.0          # Decision threshold for regime break detection
+  m_consecutive: 3          # Number of consecutive anomalous observations required for break confirmation
+  min_obs: 12               # Minimum history observations required for reliable harmonic baseline
+  pca_dimensions: 32        # Projected dimensionality from 768-dim Prithvi visual embedding
+  harmonic_terms: 2         # Annual (2*pi*t/365) and semi-annual (4*pi*t/365) cycles
+  valid_pixel_min: 0.80     # Minimum unmasked valid pixel fraction (Gate 1)
+  coreg_residual_max_px: 0.5 # Maximum acceptable FFT phase correlation residual (Gate 2)
+
+degraded_mode:
+  fallback_method: "spectral_index"
+  confidence_penalty: 0.25
+  spectral_threshold: 0.20

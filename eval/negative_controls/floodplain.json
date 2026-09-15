@@ -1,0 +1,12 @@
+{
+  "control_id": "NEG_FLOODPLAIN_01",
+  "name": "Yamuna Monsoon Floodplain Control",
+  "location": [77.240, 28.580],
+  "phenomenon": "Monsoon seasonal river expansion (July-September)",
+  "expected_result": "NO_CHANGE",
+  "harmonic_baseline_fitted": true,
+  "optical_ndwi_surge": 0.42,
+  "cusum_max": 2.1,
+  "cusum_threshold": 4.0,
+  "status": "SUPPRESSED"
+}

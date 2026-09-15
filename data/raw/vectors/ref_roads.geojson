@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "name": "ref_roads",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ref_id": "ROAD_RING_MAIN",
+        "name": "Mahatma Gandhi Ring Road",
+        "kind": "trunk"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.160, 28.690],
+          [77.220, 28.710],
+          [77.250, 28.650],
+          [77.260, 28.580],
+          [77.200, 28.560],
+          [77.140, 28.610],
+          [77.160, 28.690]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ref_id": "ROAD_NH48",
+        "name": "National Highway 48",
+        "kind": "motorway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.110, 28.520],
+          [77.150, 28.560],
+          [77.190, 28.600],
+          [77.230, 28.630]
+        ]
+      }
+    }
+  ]
+}
