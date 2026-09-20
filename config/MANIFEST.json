@@ -2,64 +2,87 @@
   "system_name": "TRINETRA",
   "version": "1.0.0",
   "evaluation_context": "SIH26227 - Ministry of Defence (Indian Army, DGIS)",
-  "manifest_hash": "a3f9c2e817d54b830e2f91bc471d2b86ea92401f85de060a894a735c091e3e7f",
-  "created_at": "2026-09-15T00:00:00Z",
-  "offline_compliant": true,
+  "created_at": "2026-09-20T05:58:35.524999+00:00",
+  "offline_compliant": false,
+  "artifacts_staged": 5,
+  "artifacts_declared": 6,
+  "manifest_hash": "02e646a6d676aa687ee423e1fdf6859e73a17ab1e3e9d93f771954ec3964eaed",
   "models": [
     {
       "name": "Prithvi-EO-2.0",
       "architecture": "Temporal ViT (300M)",
       "weights_version": "v2.0-300m",
+      "source": "https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-300M",
       "license": "Apache-2.0 (NASA-IBM)",
       "embedding_dimension": 768,
-      "sha256": "4b68e98218da3fc129b0a1a67732a39b4f981e4b47c0b0293d052a2656fe2e44",
-      "local_path": "models/prithvi_eo_2_300m/weights.safetensors",
-      "role": "Multi-spectral satellite representation & visual trajectory modeling"
+      "local_path": "models/prithvi_eo_2_300m/Prithvi_EO_V2_300M.pt",
+      "role": "Multi-spectral satellite representation & visual trajectory modeling",
+      "sha256": "faab2c8b776f0723f93431747603a7ec586a54fc45473613b4322c29752486e7",
+      "size_bytes": 1326658396,
+      "staged": true
     },
     {
       "name": "RemoteCLIP-ViT-B-32",
       "architecture": "Dual Vision-Language Transformer",
       "weights_version": "ViT-B/32",
+      "source": "https://huggingface.co/chendelong/RemoteCLIP",
       "license": "Research & Academic Evaluation",
       "embedding_dimension": 512,
-      "sha256": "82a88478d10b784a1e483427f71b28807d89ea717b447604312ea933b9187ec9",
-      "local_path": "models/remoteclip_vit_b32/weights.pt",
-      "role": "Shared image-text semantic retrieval space"
+      "local_path": "models/remoteclip_vit_b32/RemoteCLIP-ViT-B-32.pt",
+      "role": "Shared image-text semantic retrieval space",
+      "sha256": "60014e395d930a3f2963d1d89c8522bf4ad56775571e4356e866864789af85c4",
+      "size_bytes": 605208421,
+      "staged": true
+    },
+    {
+      "name": "FastSAM-s",
+      "architecture": "YOLOv8-seg instance segmentation",
+      "weights_version": "FastSAM-s",
+      "source": "https://github.com/ultralytics/ultralytics",
+      "license": "AGPL-3.0",
+      "local_path": "models/fastsam/FastSAM-s.pt",
+      "role": "Class-agnostic geo-object segmentation (default tier)",
+      "sha256": "c9f78716a81c7aff0d608ccc73e1b82ab3aaad86005049f6a92106a0be6d0844",
+      "size_bytes": 23851578,
+      "staged": true
     },
     {
       "name": "SAM (Segment Anything Model)",
       "architecture": "ViT-B Mask Decoder",
-      "weights_version": "sam_vit_b_01ec64",
+      "weights_version": "facebook/sam-vit-base",
+      "source": "https://huggingface.co/facebook/sam-vit-base",
       "license": "Apache-2.0",
-      "sha256": "a7bf3b02f3ebf1267abb1a3840880ee2004482281477c68d1d8017b1a7d13e29",
-      "local_path": "models/sam_vit_b/sam_vit_b.pth",
-      "role": "Class-agnostic spatial instance segmentation of satellite chips into geo-objects"
-    },
-    {
-      "name": "Qwen2.5-VL-7B-Instruct",
-      "architecture": "Vision-Language Autoregressive Model",
-      "weights_version": "7B-Instruct-GGUF",
-      "license": "Tongyi Qianwen Open License",
-      "sha256": "18cf703b41c098897a9f7e9b895690b213b28b7ca2c10b10e53a3e6f2122eb90",
-      "local_path": "models/qwen2.5-vl-7b/model.gguf",
-      "role": "Top-5 candidate VLM verification, change reasoning & analyst evidence generation"
+      "local_path": "models/sam_vit_b/model.safetensors",
+      "role": "Class-agnostic geo-object segmentation (quality tier)",
+      "sha256": "892c410e496344e527255ccdcb2cb7244a609acb5389c7c4fdba1288f861c579",
+      "size_bytes": 374979480,
+      "staged": true
     },
     {
       "name": "s2cloudless",
-      "architecture": "Gradient Boosted Cloud Masking",
-      "weights_version": "1.4.0",
-      "license": "Public Domain / CC0",
-      "sha256": "6b6ffc298031a0e8d0ec50b86c43310037a3b372481e3532c52514112e45ff99",
-      "local_path": "models/s2cloudless/model.pkl",
-      "role": "Deterministic cloud & cloud-shadow masking (Gate 1)"
+      "architecture": "Gradient Boosted Cloud Masking (LightGBM)",
+      "weights_version": "1.7.2",
+      "source": "https://github.com/sentinel-hub/sentinel2-cloud-detector",
+      "license": "CC-BY-SA-4.0",
+      "local_path": "models/s2cloudless/pixel_s2_cloud_detector_lightGBM_v0.1.txt",
+      "role": "Deterministic cloud & cloud-shadow masking (Gate 1)",
+      "sha256": "0f92b6822cc0ad42982f55bab9b1688329e119451ad9a9e0a56384b9f37bc61d",
+      "size_bytes": 10975392,
+      "staged": true
     }
   ],
   "frozen_components": {
     "pca_basis": {
-      "path": "models/pca_basis.npz",
-      "dimensions": [768, 32],
-      "variance_explained": 0.884,
-      "sha256": "29e9ca810f6534be548480391d84b068da871bf2c65913e0b892ec06f753df18"
+      "name": "pca_basis",
+      "local_path": "models/pca_basis.npz",
+      "dimensions": [
+        768,
+        32
+      ],
+      "role": "Frozen projection for embedding trajectories (PRD section 7.2)",
+      "note": "Fitted by scripts/11_generate_embeddings.py from real embeddings",
+      "sha256": null,
+      "staged": false
     }
   }
 }

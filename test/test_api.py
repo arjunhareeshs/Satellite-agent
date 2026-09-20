@@ -25,7 +25,12 @@ def test_health_endpoint():
     assert resp.status_code == 200
     data = resp.json()
     assert data["status"] == "healthy"
-    assert data["audit_ledger_valid"] is True
+    # audit_ledger is now a real status dict {backend, entries, chain_valid},
+    # not a bare bool -- the ledger can be honestly in-memory (no PostgreSQL in
+    # this test environment) while its chain is still internally valid.
+    assert data["audit_ledger"]["chain_valid"] is True
+    assert "model_manifest" in data
+    assert "proj_data" in data
 
 
 def test_stats_endpoint():

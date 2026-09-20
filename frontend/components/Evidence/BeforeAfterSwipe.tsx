@@ -1,12 +1,14 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
-import { SlidersHorizontal, Image as ImageIcon, Radio } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { SlidersHorizontal, Radio, ImageOff } from 'lucide-react';
 
 interface BeforeAfterSwipeProps {
   beforeUrl: string;
   afterUrl: string;
   sarUrl?: string;
+  /** The entity's own dates. No default -- a missing date should read as
+   * missing, not silently become a fixed literal from an unrelated entity. */
   beforeDate?: string;
   afterDate?: string;
 }
@@ -15,16 +17,24 @@ export const BeforeAfterSwipe: React.FC<BeforeAfterSwipeProps> = ({
   beforeUrl,
   afterUrl,
   sarUrl,
-  beforeDate = "2024-07-11 (Optical)",
-  afterDate = "2025-06-14 (Optical)"
+  beforeDate,
+  afterDate,
 }) => {
   const [sliderPos, setSliderPos] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const [showSar, setShowSar] = useState(false);
+  const [beforeFailed, setBeforeFailed] = useState(false);
+  const [afterFailed, setAfterFailed] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const activeAfterUrl = showSar && sarUrl ? sarUrl : afterUrl;
-  const activeAfterLabel = showSar && sarUrl ? "2024-08-19 (Sentinel-1 SAR)" : afterDate;
+  // Previously a hardcoded "2024-08-19 (Sentinel-1 SAR)" regardless of which
+  // entity was open. SAR has no separate date prop on this entity's imagery
+  // record, so the honest label names the sensor without fabricating a date.
+  const activeAfterLabel = showSar && sarUrl
+    ? 'Sentinel-1 SAR'
+    : (afterDate ? `${afterDate} (Optical)` : 'Optical (date unavailable)');
+  const activeBeforeLabel = beforeDate ? `${beforeDate} (Optical)` : 'Optical (date unavailable)';
 
   const handleMove = (clientX: number) => {
     if (!containerRef.current) return;
@@ -81,24 +91,43 @@ export const BeforeAfterSwipe: React.FC<BeforeAfterSwipeProps> = ({
         onTouchMove={handleTouchMove}
         className="relative h-64 sm:h-72 w-full rounded overflow-hidden border border-slate-800 cursor-ew-resize select-none bg-slate-950"
       >
-        {/* AFTER Image (Full background) */}
-        <img
-          src={activeAfterUrl}
-          alt="After Observation"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        {/* AFTER Image (Full background). onError previously had no
+            handler at all, so a 404 chip silently rendered as a blank box
+            with no indication anything was wrong. */}
+        {afterFailed ? (
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 text-slate-600 bg-slate-950">
+            <ImageOff className="w-6 h-6" />
+            <span className="text-[10px] font-mono">Chip unavailable</span>
+          </div>
+        ) : (
+          <img
+            key={activeAfterUrl}
+            src={activeAfterUrl}
+            alt="After Observation"
+            className="absolute inset-0 w-full h-full object-cover"
+            onError={() => setAfterFailed(true)}
+          />
+        )}
 
         {/* BEFORE Image (Clipped overlay) */}
         <div
           className="absolute inset-0 overflow-hidden"
           style={{ width: `${sliderPos}%` }}
         >
-          <img
-            src={beforeUrl}
-            alt="Before Observation"
-            className="absolute inset-0 w-full h-full object-cover max-w-none"
-            style={{ width: containerRef.current ? `${containerRef.current.clientWidth}px` : '100%' }}
-          />
+          {beforeFailed ? (
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 text-slate-600 bg-slate-950" style={{ width: containerRef.current ? `${containerRef.current.clientWidth}px` : '100%' }}>
+              <ImageOff className="w-6 h-6" />
+              <span className="text-[10px] font-mono">Chip unavailable</span>
+            </div>
+          ) : (
+            <img
+              src={beforeUrl}
+              alt="Before Observation"
+              className="absolute inset-0 w-full h-full object-cover max-w-none"
+              style={{ width: containerRef.current ? `${containerRef.current.clientWidth}px` : '100%' }}
+              onError={() => setBeforeFailed(true)}
+            />
+          )}
         </div>
 
         {/* Draggable Divider Line */}
@@ -114,7 +143,7 @@ export const BeforeAfterSwipe: React.FC<BeforeAfterSwipeProps> = ({
         {/* Labels */}
         <div className="absolute top-2 left-2 z-20 pointer-events-none">
           <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950/80 text-slate-200 border border-slate-700/60 backdrop-blur-sm">
-            BEFORE: {beforeDate}
+            BEFORE: {activeBeforeLabel}
           </span>
         </div>
         <div className="absolute top-2 right-2 z-20 pointer-events-none">

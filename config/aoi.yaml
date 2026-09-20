@@ -1,5 +1,5 @@
 name: "delhi_ncr_yamuna"
-version: 1
+version: 2
 description: "Yamuna river corridor and Delhi-NCR region for SIH26227 evaluation"
 working_crs: "EPSG:32643"  # WGS 84 / UTM zone 43N
 storage_crs: "EPSG:4326"   # WGS 84 geographic coordinates
@@ -17,10 +17,63 @@ polygon_coordinates:
   - [77.35, 28.72]
   - [77.10, 28.72]
   - [77.10, 28.50]
-area_km2: 538.2
-mgrs_tiles:
-  - "43RFG"
-  - "43RFH"
+
+# v2 correction: the previous value of 538.2 was wrong and nothing recomputed it.
+# Recomputed geodesic area on the authalic sphere (R=6371008.8 m):
+#   A = R^2 * dlon_rad * (sin(lat_max) - sin(lat_min))
+# 01_define_aoi.py recomputes this and fails loudly if it drifts.
+area_km2: 597.01
+
+# v2 correction: the previous value ["43RFG", "43RFH"] does not cover this bbox.
+#
+# Two distinct things were being conflated under one key, so they are now split.
+#
+# mgrs_squares: the strict MGRS 100 km squares the AOI falls inside. Derived
+# geometrically and asserted by 01_define_aoi.py.
+mgrs_squares:
+  - "43RGM"
+#
+# s2_product_tiles: the Sentinel-2 *granule* tiles whose footprints cover the
+# AOI. These are not the same set. S2 granules are 110 km with roughly 10 km of
+# overlap between neighbours, so a granule named for an adjacent square still
+# covers ground inside this one. Verified against live Earth Search responses
+# over these exact bounds -- both tiles return scenes.
+s2_product_tiles:
+  - "43RFM"
+  - "43RGM"
+
+# v2: widened from 2024-01-01/2025-12-31.
+# The harmonic seasonal baseline (PRD §7.3) needs several years of history BEFORE
+# the change window, otherwise CUSUM fires on ordinary phenology. Real archive
+# depth over this AOI is 2018->2026 for both S2 L2A and S1 RTC.
 temporal_window:
-  start: "2024-01-01"
-  end: "2025-12-31"
+  start: "2022-01-01"
+  end: "2026-09-30"
+
+# Scene selection policy (PRD §4.3 "search before download").
+selection:
+  max_cloud_cover: 30            # eo:cloud_cover upper bound, percent
+  min_aoi_intersection: 0.6      # fraction of AOI a scene must cover
+  max_scenes_per_month: 3        # temporal stratification
+  prefer: "lowest_cloud"         # tie-break within a month
+  # Never silently drop a month. Months with no usable scene are recorded in
+  # data/metadata/s2_scenes.json under "coverage_gaps" and reported in the
+  # evaluation write-up, per PRD §4.3.
+  record_gaps: true
+
+# The canonical analysis grid. EVERY scene, optical or SAR, is warped onto this
+# exact grid so optical and SAR land on identical pixel centres (PRD §4.5,
+# "non-negotiable"). S2 is natively EPSG:32643 but S1 RTC arrives as EPSG:32644,
+# so the warp is what actually makes dual-witness fusion meaningful.
+# Derived deterministically from `bounds` by backend/core/grid.py; the values
+# below are the computed result and are asserted at import time.
+grid:
+  crs: "EPSG:32643"
+  resolution_m: 10.0
+  # origin/width/height are filled in by 01_define_aoi.py and verified on load.
+  snap_m: 10.0
+
+chipping:
+  chip_size_px: 256
+  stride_px: 128
+  h3_resolution: 9

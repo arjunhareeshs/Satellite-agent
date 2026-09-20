@@ -1,5 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import Providers from '@/components/Providers';
 
 export const metadata: Metadata = {
   title: 'TRINETRA — Sovereign Satellite Intelligence Retrieval',
@@ -14,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="bg-command-bg text-slate-100 min-h-screen antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

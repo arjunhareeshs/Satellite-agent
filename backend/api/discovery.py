@@ -20,7 +20,7 @@ class SimilarSitesRequest(BaseModel):
 
 @router.post("/similar-sites")
 async def discover_similar_sites(request: SimilarSitesRequest):
-    all_entities = list(spatial_engine._entities.values())
+    all_entities = spatial_engine.list_all_entities()
     results = clustering_engine.cluster_similar_sites(
         seed_entity_ids=request.seed_entity_ids,
         entities=all_entities,
@@ -39,7 +39,7 @@ async def get_co_change_graph(max_window_days: int = 21):
     Co-Change Graph (§8.6):
     Surfaces groups of sites that started changing at the same time across the AOI.
     """
-    all_entities = list(spatial_engine._entities.values())
+    all_entities = spatial_engine.list_all_entities()
     graph = clustering_engine.build_co_change_graph(
         entities=all_entities,
         max_window_days=max_window_days

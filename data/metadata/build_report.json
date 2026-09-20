@@ -1,5 +1,6 @@
 {
   "evaluation_name": "SIH26227 Benchmark Submission",
+  "measured_at": "2026-09-20T15:30:44Z",
   "aoi_name": "delhi_ncr_yamuna",
   "bounds": {
     "min_lon": 77.1,
@@ -7,73 +8,44 @@
     "max_lon": 77.35,
     "max_lat": 28.72
   },
-  "area_km2": 538.2,
-  "scenes_indexed": {
-    "total": 94,
-    "sentinel2": 58,
-    "sentinel1": 36
+  "area_km2": 597.01,
+  "scenes": {
+    "sentinel2_searched": 133,
+    "sentinel2_downloaded": 51,
+    "sentinel1_searched": 135,
+    "sentinel1_downloaded": 50,
+    "total_downloaded": 101
   },
-  "entities_indexed": 1420,
-  "build_time_sec": {
-    "stac_search_and_download": 42.1,
-    "preprocessing_s2_s1": 34.6,
-    "chipping_and_segmentation": 28.4,
-    "dual_embeddings_generation": 18.2,
-    "qdrant_hnsw_build": 7.8,
-    "postgis_gist_and_relations": 8.5,
-    "parquet_trajectories_and_rls": 6.2,
-    "total_wall_clock": 145.8
+  "entities": {
+    "total": 0,
+    "by_type": {},
+    "source": "spatial_engine (live)"
   },
   "storage_footprint": {
-    "raster_cogs": "14.2 GB",
-    "postgis_spatial_db": "340 MB",
-    "qdrant_vector_store": "180 MB",
-    "parquet_trajectories": "290 MB",
-    "total_footprint": "15.01 GB"
+    "raw_bytes": 7408162942,
+    "processed_bytes": 303512233,
+    "models_bytes": 2341750349,
+    "metadata_bytes": 405491,
+    "total_bytes": 10053831015,
+    "raw_human": "6.9 GB",
+    "processed_human": "289.5 MB",
+    "models_human": "2.2 GB",
+    "total_human": "9.4 GB"
   },
   "query_latency_ms": {
-    "nl_parse": 184.0,
-    "spatial_prefilter": 26.0,
-    "vector_hnsw": 17.0,
-    "temporal_trajectories": 58.0,
-    "sensor_fusion": 12.0,
-    "vlm_explanation_top5": 1840.0,
-    "total_p50": 2137.0,
-    "total_p95": 2480.0
+    "n_queries": 3,
+    "p50_ms": 18.9,
+    "p95_ms": 22986.6,
+    "min_ms": 17.7,
+    "max_ms": 22986.6
   },
-  "incremental_ingest_time_sec": 2.6,
-  "false_alarm_cascade_ablation": [
-    {
-      "configuration": "Naive image difference",
-      "change_f1": 0.42,
-      "false_alarm_rate": "68%"
-    },
-    {
-      "configuration": "+ Quality cloud/shadow masking",
-      "change_f1": 0.58,
-      "false_alarm_rate": "47%"
-    },
-    {
-      "configuration": "+ FFT phase co-registration",
-      "change_f1": 0.69,
-      "false_alarm_rate": "31%"
-    },
-    {
-      "configuration": "+ Radiometric harmonization",
-      "change_f1": 0.76,
-      "false_alarm_rate": "24%"
-    },
-    {
-      "configuration": "+ Harmonic seasonal baseline",
-      "change_f1": 0.89,
-      "false_alarm_rate": "12%"
-    },
-    {
-      "configuration": "+ Dual-witness SAR fusion",
-      "change_f1": 0.94,
-      "false_alarm_rate": "4.8%"
-    }
-  ],
-  "hardware": "AMD / Intel x86_64, 32GB RAM, Sovereign On-Premises",
-  "offline_verified": true
+  "offline_compliance": {
+    "manifest_ok": false,
+    "manifest_message": "1 missing",
+    "active_vlm_provider": "template",
+    "offline_compliant": false
+  },
+  "false_alarm_cascade_ablation": null,
+  "false_alarm_cascade_ablation_note": "Not measured by this script. Requires eval/change_labels.json coverage across the real archive and a run per gate configuration; see eval/run_eval.py for the single-configuration metrics that are measured.",
+  "benchmark_wall_clock_sec": 29.4
 }

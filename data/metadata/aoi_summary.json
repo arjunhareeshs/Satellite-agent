@@ -1,0 +1,63 @@
+{
+  "name": "delhi_ncr_yamuna",
+  "version": 2,
+  "bounds": {
+    "min_lon": 77.1,
+    "min_lat": 28.5,
+    "max_lon": 77.35,
+    "max_lat": 28.72
+  },
+  "center": {
+    "lon": 77.225,
+    "lat": 28.61
+  },
+  "area_km2": 597.01,
+  "area_source": "geodesic on authalic sphere R=6371008.8 m",
+  "mgrs_squares": [
+    "43RGM"
+  ],
+  "s2_product_tiles": [
+    "43RFM",
+    "43RGM"
+  ],
+  "working_crs": "EPSG:32643",
+  "storage_crs": "EPSG:4326",
+  "temporal_window": {
+    "start": "2022-01-01",
+    "end": "2026-09-30"
+  },
+  "selection": {
+    "max_cloud_cover": 30,
+    "min_aoi_intersection": 0.6,
+    "max_scenes_per_month": 3,
+    "prefer": "lowest_cloud",
+    "record_gaps": true
+  },
+  "chipping": {
+    "chip_size_px": 256,
+    "stride_px": 128,
+    "h3_resolution": 9
+  },
+  "grid": {
+    "crs": "EPSG:32643",
+    "resolution_m": 10.0,
+    "origin_x": 705110.0,
+    "origin_y": 3179230.0,
+    "width": 2491,
+    "height": 2485,
+    "bounds": [
+      705110.0,
+      3154380.0,
+      730020.0,
+      3179230.0
+    ],
+    "transform": [
+      10.0,
+      0.0,
+      705110.0,
+      0.0,
+      -10.0,
+      3179230.0
+    ]
+  }
+}

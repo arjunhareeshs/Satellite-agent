@@ -1,0 +1,81 @@
+{
+  "sensor": "sentinel-1",
+  "collection": "sentinel-1-rtc",
+  "relative_orbit": 27,
+  "speckle_window": 5,
+  "scenes_processed": 2,
+  "valid_pixel_fraction": {
+    "min": 1.0,
+    "median": 1.0,
+    "max": 1.0
+  },
+  "note": "Calibration and terrain correction were applied by the RTC product upstream; this stage performs speckle suppression and verifies canonical-grid conformance.",
+  "scenes": [
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220110T125510_20220110T125539_041399_04EC23_rtc",
+      "datetime": "2022-01-10T12:55:25.371018Z",
+      "sensor": "sentinel-1",
+      "output": "data\\processed\\s1_cogs\\S1A_IW_GRDH_1SDV_20220110T125510_20220110T125539_041399_04EC23_rtc.tif",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "source_epsg": null,
+      "valid_pixel_fraction": 1.0,
+      "speckle": {
+        "window": 5,
+        "equivalent_looks_before": 7.645,
+        "equivalent_looks_after": 9.389
+      },
+      "backscatter": {
+        "vv_db_mean": -6.001,
+        "vv_db_std": 3.795,
+        "vh_db_mean": -12.446,
+        "vh_db_std": 3.085
+      },
+      "grid_conformant": true,
+      "processing_chain": [
+        "rtc_orbit_correction_upstream",
+        "rtc_thermal_noise_removal_upstream",
+        "rtc_radiometric_calibration_upstream",
+        "rtc_terrain_correction_upstream",
+        "warp_to_canonical_grid",
+        "db_conversion",
+        "multitemporal_speckle_filter",
+        "cog_write"
+      ],
+      "elapsed_sec": 20.45
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220122T125510_20220122T125539_041574_04F1E1_rtc",
+      "datetime": "2022-01-22T12:55:24.680608Z",
+      "sensor": "sentinel-1",
+      "output": "data\\processed\\s1_cogs\\S1A_IW_GRDH_1SDV_20220122T125510_20220122T125539_041574_04F1E1_rtc.tif",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "source_epsg": null,
+      "valid_pixel_fraction": 1.0,
+      "speckle": {
+        "window": 5,
+        "equivalent_looks_before": 7.418,
+        "equivalent_looks_after": 9.082
+      },
+      "backscatter": {
+        "vv_db_mean": -5.865,
+        "vv_db_std": 3.816,
+        "vh_db_mean": -12.38,
+        "vh_db_std": 3.114
+      },
+      "grid_conformant": true,
+      "processing_chain": [
+        "rtc_orbit_correction_upstream",
+        "rtc_thermal_noise_removal_upstream",
+        "rtc_radiometric_calibration_upstream",
+        "rtc_terrain_correction_upstream",
+        "warp_to_canonical_grid",
+        "db_conversion",
+        "multitemporal_speckle_filter",
+        "cog_write"
+      ],
+      "elapsed_sec": 20.41
+    }
+  ]
+}

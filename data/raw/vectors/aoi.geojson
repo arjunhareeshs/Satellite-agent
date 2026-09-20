@@ -2,18 +2,41 @@
   "type": "Feature",
   "properties": {
     "name": "delhi_ncr_yamuna",
-    "version": 1,
-    "crs": "EPSG:4326",
-    "area_km2": 538.2
+    "version": 2,
+    "area_km2": 597.01,
+    "mgrs_squares": [
+      "43RGM"
+    ],
+    "s2_product_tiles": [
+      "43RFM",
+      "43RGM"
+    ]
   },
   "geometry": {
     "type": "Polygon",
-    "coordinates": [[
-      [77.10, 28.50],
-      [77.35, 28.50],
-      [77.35, 28.72],
-      [77.10, 28.72],
-      [77.10, 28.50]
-    ]]
+    "coordinates": [
+      [
+        [
+          77.1,
+          28.5
+        ],
+        [
+          77.35,
+          28.5
+        ],
+        [
+          77.35,
+          28.72
+        ],
+        [
+          77.1,
+          28.72
+        ],
+        [
+          77.1,
+          28.5
+        ]
+      ]
+    ]
   }
 }

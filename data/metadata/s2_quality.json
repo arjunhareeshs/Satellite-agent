@@ -1,0 +1,104 @@
+{
+  "sensor": "sentinel-2",
+  "reference_scene": "S2A_43RGM_20220213_0_L2A",
+  "coregistration_band": "B8A",
+  "gate_2_threshold_px": 0.5,
+  "scenes_processed": 2,
+  "scenes_excluded_from_change": 0,
+  "valid_pixel_fraction": {
+    "min": 1.0,
+    "median": 1.0,
+    "max": 1.0
+  },
+  "registration_residual_px": {
+    "min": 0.0,
+    "median": 0.0,
+    "max": 0.0
+  },
+  "scenes": [
+    {
+      "stac_id": "S2B_43RGM_20220129_0_L2A",
+      "datetime": "2022-01-29T05:40:57.476000Z",
+      "sensor": "sentinel-2",
+      "output": "data\\processed\\s2_cogs\\S2B_43RGM_20220129_0_L2A.tif",
+      "reference_scene": "S2A_43RGM_20220213_0_L2A",
+      "valid_pixel_fraction": 1.0,
+      "scl_breakdown_pct": {
+        "no_data_pct": 0.0,
+        "shadow_pct": 0.0,
+        "cloud_pct": 0.0,
+        "cirrus_pct": 0.0,
+        "snow_pct": 0.0
+      },
+      "s2cloudless_mean_probability": null,
+      "scene_cloud_cover": 0.000129,
+      "coregistration": {
+        "shift_y_px": 0.0,
+        "shift_x_px": 0.0,
+        "registration_residual_px": 0.0,
+        "correlation_error": 1.0,
+        "phase_difference": -1.2601099835413448e-18,
+        "passes_gate_2": true
+      },
+      "radiometric": {
+        "applied": true,
+        "mean_offset_per_band": [
+          -60.86,
+          13.58,
+          37.13,
+          34.81,
+          66.44,
+          55.58
+        ]
+      },
+      "excluded_from_change": false,
+      "processing_chain": [
+        "scl_mask",
+        "scl_only",
+        "phase_correlation_coregister",
+        "histogram_match",
+        "cog_write"
+      ],
+      "elapsed_sec": 42.5
+    },
+    {
+      "stac_id": "S2A_43RGM_20220213_0_L2A",
+      "datetime": "2022-02-13T05:41:03.321000Z",
+      "sensor": "sentinel-2",
+      "output": "data\\processed\\s2_cogs\\S2A_43RGM_20220213_0_L2A.tif",
+      "reference_scene": "S2A_43RGM_20220213_0_L2A",
+      "valid_pixel_fraction": 1.0,
+      "scl_breakdown_pct": {
+        "no_data_pct": 0.0,
+        "shadow_pct": 0.0,
+        "cloud_pct": 0.0,
+        "cirrus_pct": 0.0,
+        "snow_pct": 0.0
+      },
+      "s2cloudless_mean_probability": null,
+      "scene_cloud_cover": 1.3e-05,
+      "coregistration": {
+        "shift_y_px": 0.0,
+        "shift_x_px": 0.0,
+        "registration_residual_px": 0.0,
+        "correlation_error": 0.0,
+        "phase_difference": 0.0,
+        "passes_gate_2": true,
+        "note": "reference scene"
+      },
+      "radiometric": {
+        "applied": false,
+        "note": "reference scene"
+      },
+      "excluded_from_change": false,
+      "processing_chain": [
+        "scl_mask",
+        "scl_only",
+        "phase_correlation_coregister",
+        "histogram_match",
+        "cog_write"
+      ],
+      "elapsed_sec": 31.55
+    }
+  ]
+}

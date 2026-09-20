@@ -1,8 +1,2191 @@
 {
-  "total": 36,
-  "aoi": "delhi_ncr_yamuna",
-  "polarizations": [
-    "VV",
-    "VH"
+  "sensor": "sentinel-1",
+  "collection": "sentinel-1-rtc",
+  "provider": "microsoft-planetary-computer",
+  "endpoint": "https://planetarycomputer.microsoft.com/api/stac/v1",
+  "searched_at": "2026-09-20T05:40:57.562777+00:00",
+  "aoi_bbox": [
+    77.1,
+    28.5,
+    77.35,
+    28.72
+  ],
+  "temporal_window": {
+    "start": "2022-01-01",
+    "end": "2026-09-30"
+  },
+  "filters": {
+    "min_aoi_intersection": 0.6,
+    "max_scenes_per_month": 3,
+    "relative_orbit": 27
+  },
+  "orbit_distribution": {
+    "27": 135,
+    "136": 113
+  },
+  "candidates_found": 248,
+  "total": 135,
+  "coverage_gaps": [],
+  "scenes": [
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220110T125510_20220110T125539_041399_04EC23_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-01-10T12:55:25.371018Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/1/10/IW/DV/S1A_IW_GRDH_1SDV_20220110T125510_20220110T125539_041399_04EC23_A5CD/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/1/10/IW/DV/S1A_IW_GRDH_1SDV_20220110T125510_20220110T125539_041399_04EC23_A5CD/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220122T125510_20220122T125539_041574_04F1E1_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-01-22T12:55:24.680608Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/1/22/IW/DV/S1A_IW_GRDH_1SDV_20220122T125510_20220122T125539_041574_04F1E1_06ED/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/1/22/IW/DV/S1A_IW_GRDH_1SDV_20220122T125510_20220122T125539_041574_04F1E1_06ED/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220203T125509_20220203T125538_041749_04F7D1_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-02-03T12:55:24.009226Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/2/3/IW/DV/S1A_IW_GRDH_1SDV_20220203T125509_20220203T125538_041749_04F7D1_D598/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/2/3/IW/DV/S1A_IW_GRDH_1SDV_20220203T125509_20220203T125538_041749_04F7D1_D598/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220215T125509_20220215T125538_041924_04FDF9_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-02-15T12:55:24.066182Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/2/15/IW/DV/S1A_IW_GRDH_1SDV_20220215T125509_20220215T125538_041924_04FDF9_F149/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/2/15/IW/DV/S1A_IW_GRDH_1SDV_20220215T125509_20220215T125538_041924_04FDF9_F149/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220311T125509_20220311T125538_042274_0509EE_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-03-11T12:55:24.000167Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/3/11/IW/DV/S1A_IW_GRDH_1SDV_20220311T125509_20220311T125538_042274_0509EE_1C85/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/3/11/IW/DV/S1A_IW_GRDH_1SDV_20220311T125509_20220311T125538_042274_0509EE_1C85/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220323T125509_20220323T125538_042449_050FE4_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-03-23T12:55:24.365878Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/3/23/IW/DV/S1A_IW_GRDH_1SDV_20220323T125509_20220323T125538_042449_050FE4_54EE/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/3/23/IW/DV/S1A_IW_GRDH_1SDV_20220323T125509_20220323T125538_042449_050FE4_54EE/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220404T125510_20220404T125539_042624_0515D9_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-04-04T12:55:24.533156Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/4/4/IW/DV/S1A_IW_GRDH_1SDV_20220404T125510_20220404T125539_042624_0515D9_DA95/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/4/4/IW/DV/S1A_IW_GRDH_1SDV_20220404T125510_20220404T125539_042624_0515D9_DA95/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220416T125510_20220416T125539_042799_051BBC_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-04-16T12:55:24.771915Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/4/16/IW/DV/S1A_IW_GRDH_1SDV_20220416T125510_20220416T125539_042799_051BBC_BC04/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/4/16/IW/DV/S1A_IW_GRDH_1SDV_20220416T125510_20220416T125539_042799_051BBC_BC04/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220428T125510_20220428T125539_042974_052174_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-04-28T12:55:25.434271Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/4/28/IW/DV/S1A_IW_GRDH_1SDV_20220428T125510_20220428T125539_042974_052174_E273/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/4/28/IW/DV/S1A_IW_GRDH_1SDV_20220428T125510_20220428T125539_042974_052174_E273/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220510T125511_20220510T125540_043149_052740_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-05-10T12:55:26.032076Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/5/10/IW/DV/S1A_IW_GRDH_1SDV_20220510T125511_20220510T125540_043149_052740_45BF/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/5/10/IW/DV/S1A_IW_GRDH_1SDV_20220510T125511_20220510T125540_043149_052740_45BF/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220522T125512_20220522T125541_043324_052C76_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-05-22T12:55:26.807069Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/5/22/IW/DV/S1A_IW_GRDH_1SDV_20220522T125512_20220522T125541_043324_052C76_D943/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/5/22/IW/DV/S1A_IW_GRDH_1SDV_20220522T125512_20220522T125541_043324_052C76_D943/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220603T125513_20220603T125542_043499_05319C_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-06-03T12:55:27.980054Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/3/IW/DV/S1A_IW_GRDH_1SDV_20220603T125513_20220603T125542_043499_05319C_9C0D/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/3/IW/DV/S1A_IW_GRDH_1SDV_20220603T125513_20220603T125542_043499_05319C_9C0D/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220615T125513_20220615T125542_043674_0536DA_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-06-15T12:55:28.421744Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/15/IW/DV/S1A_IW_GRDH_1SDV_20220615T125513_20220615T125542_043674_0536DA_DDFA/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/15/IW/DV/S1A_IW_GRDH_1SDV_20220615T125513_20220615T125542_043674_0536DA_DDFA/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220627T125514_20220627T125543_043849_053C18_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-06-27T12:55:29.445756Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/27/IW/DV/S1A_IW_GRDH_1SDV_20220627T125514_20220627T125543_043849_053C18_6AFE/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/27/IW/DV/S1A_IW_GRDH_1SDV_20220627T125514_20220627T125543_043849_053C18_6AFE/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220709T125515_20220709T125544_044024_054146_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-07-09T12:55:30.072007Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/7/9/IW/DV/S1A_IW_GRDH_1SDV_20220709T125515_20220709T125544_044024_054146_21D2/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/7/9/IW/DV/S1A_IW_GRDH_1SDV_20220709T125515_20220709T125544_044024_054146_21D2/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220721T125516_20220721T125545_044199_054682_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-07-21T12:55:30.805867Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/7/21/IW/DV/S1A_IW_GRDH_1SDV_20220721T125516_20220721T125545_044199_054682_1D40/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/7/21/IW/DV/S1A_IW_GRDH_1SDV_20220721T125516_20220721T125545_044199_054682_1D40/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220802T125517_20220802T125546_044374_054BAC_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-08-02T12:55:31.637946Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/8/2/IW/DV/S1A_IW_GRDH_1SDV_20220802T125517_20220802T125546_044374_054BAC_8598/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/8/2/IW/DV/S1A_IW_GRDH_1SDV_20220802T125517_20220802T125546_044374_054BAC_8598/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220814T125517_20220814T125546_044549_055128_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-08-14T12:55:32.372357Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/8/14/IW/DV/S1A_IW_GRDH_1SDV_20220814T125517_20220814T125546_044549_055128_A8DF/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/8/14/IW/DV/S1A_IW_GRDH_1SDV_20220814T125517_20220814T125546_044549_055128_A8DF/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220826T125518_20220826T125547_044724_05570E_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-08-26T12:55:32.762291Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/8/26/IW/DV/S1A_IW_GRDH_1SDV_20220826T125518_20220826T125547_044724_05570E_DD09/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/8/26/IW/DV/S1A_IW_GRDH_1SDV_20220826T125518_20220826T125547_044724_05570E_DD09/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220907T125519_20220907T125548_044899_055CF1_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-09-07T12:55:33.658140Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9999,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/9/7/IW/DV/S1A_IW_GRDH_1SDV_20220907T125519_20220907T125548_044899_055CF1_33CD/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/9/7/IW/DV/S1A_IW_GRDH_1SDV_20220907T125519_20220907T125548_044899_055CF1_33CD/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20220919T125518_20220919T125547_045074_0562DA_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-09-19T12:55:33.246593Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/9/19/IW/DV/S1A_IW_GRDH_1SDV_20220919T125518_20220919T125547_045074_0562DA_AF13/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/9/19/IW/DV/S1A_IW_GRDH_1SDV_20220919T125518_20220919T125547_045074_0562DA_AF13/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20221001T125519_20221001T125548_045249_0568B6_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-10-01T12:55:34.060753Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9999,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/10/1/IW/DV/S1A_IW_GRDH_1SDV_20221001T125519_20221001T125548_045249_0568B6_8493/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/10/1/IW/DV/S1A_IW_GRDH_1SDV_20221001T125519_20221001T125548_045249_0568B6_8493/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20221013T125519_20221013T125548_045424_056E94_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-10-13T12:55:33.862015Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/10/13/IW/DV/S1A_IW_GRDH_1SDV_20221013T125519_20221013T125548_045424_056E94_727C/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/10/13/IW/DV/S1A_IW_GRDH_1SDV_20221013T125519_20221013T125548_045424_056E94_727C/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20221025T125519_20221025T125548_045599_0573C6_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-10-25T12:55:34.182891Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/10/25/IW/DV/S1A_IW_GRDH_1SDV_20221025T125519_20221025T125548_045599_0573C6_266F/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/10/25/IW/DV/S1A_IW_GRDH_1SDV_20221025T125519_20221025T125548_045599_0573C6_266F/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20221106T125519_20221106T125548_045774_0579B1_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-11-06T12:55:33.710332Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/11/6/IW/DV/S1A_IW_GRDH_1SDV_20221106T125519_20221106T125548_045774_0579B1_33BC/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/11/6/IW/DV/S1A_IW_GRDH_1SDV_20221106T125519_20221106T125548_045774_0579B1_33BC/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20221118T125519_20221118T125548_045949_057F96_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-11-18T12:55:33.584837Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/11/18/IW/DV/S1A_IW_GRDH_1SDV_20221118T125519_20221118T125548_045949_057F96_549B/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/11/18/IW/DV/S1A_IW_GRDH_1SDV_20221118T125519_20221118T125548_045949_057F96_549B/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20221130T125518_20221130T125547_046124_058589_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-11-30T12:55:32.986679Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/11/30/IW/DV/S1A_IW_GRDH_1SDV_20221130T125518_20221130T125547_046124_058589_AA0D/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/11/30/IW/DV/S1A_IW_GRDH_1SDV_20221130T125518_20221130T125547_046124_058589_AA0D/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20221212T125518_20221212T125547_046299_058B7F_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-12-12T12:55:32.587469Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/12/12/IW/DV/S1A_IW_GRDH_1SDV_20221212T125518_20221212T125547_046299_058B7F_0731/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/12/12/IW/DV/S1A_IW_GRDH_1SDV_20221212T125518_20221212T125547_046299_058B7F_0731/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20221224T125517_20221224T125546_046474_05917B_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2022-12-24T12:55:31.883307Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/12/24/IW/DV/S1A_IW_GRDH_1SDV_20221224T125517_20221224T125546_046474_05917B_E483/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/12/24/IW/DV/S1A_IW_GRDH_1SDV_20221224T125517_20221224T125546_046474_05917B_E483/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230105T125516_20230105T125545_046649_059763_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-01-05T12:55:31.220616Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/1/5/IW/DV/S1A_IW_GRDH_1SDV_20230105T125516_20230105T125545_046649_059763_80E4/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/1/5/IW/DV/S1A_IW_GRDH_1SDV_20230105T125516_20230105T125545_046649_059763_80E4/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230117T125515_20230117T125544_046824_059D4D_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-01-17T12:55:30.384177Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/1/17/IW/DV/S1A_IW_GRDH_1SDV_20230117T125515_20230117T125544_046824_059D4D_C10A/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/1/17/IW/DV/S1A_IW_GRDH_1SDV_20230117T125515_20230117T125544_046824_059D4D_C10A/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230129T125516_20230129T125545_046999_05A335_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-01-29T12:55:30.611843Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/1/29/IW/DV/S1A_IW_GRDH_1SDV_20230129T125516_20230129T125545_046999_05A335_F13F/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/1/29/IW/DV/S1A_IW_GRDH_1SDV_20230129T125516_20230129T125545_046999_05A335_F13F/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230210T125515_20230210T125544_047174_05A903_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-02-10T12:55:29.812247Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/2/10/IW/DV/S1A_IW_GRDH_1SDV_20230210T125515_20230210T125544_047174_05A903_C9A7/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/2/10/IW/DV/S1A_IW_GRDH_1SDV_20230210T125515_20230210T125544_047174_05A903_C9A7/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230222T125514_20230222T125543_047349_05AEFD_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-02-22T12:55:29.263623Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/2/22/IW/DV/S1A_IW_GRDH_1SDV_20230222T125514_20230222T125543_047349_05AEFD_A9F7/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/2/22/IW/DV/S1A_IW_GRDH_1SDV_20230222T125514_20230222T125543_047349_05AEFD_A9F7/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230306T125515_20230306T125544_047524_05B4E7_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-03-06T12:55:29.737838Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/3/6/IW/DV/S1A_IW_GRDH_1SDV_20230306T125515_20230306T125544_047524_05B4E7_100C/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/3/6/IW/DV/S1A_IW_GRDH_1SDV_20230306T125515_20230306T125544_047524_05B4E7_100C/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230318T125515_20230318T125544_047699_05BAD5_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-03-18T12:55:29.681607Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/3/18/IW/DV/S1A_IW_GRDH_1SDV_20230318T125515_20230318T125544_047699_05BAD5_E000/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/3/18/IW/DV/S1A_IW_GRDH_1SDV_20230318T125515_20230318T125544_047699_05BAD5_E000/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230330T125515_20230330T125544_047874_05C0AC_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-03-30T12:55:30.008824Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/3/30/IW/DV/S1A_IW_GRDH_1SDV_20230330T125515_20230330T125544_047874_05C0AC_2488/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/3/30/IW/DV/S1A_IW_GRDH_1SDV_20230330T125515_20230330T125544_047874_05C0AC_2488/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230411T125516_20230411T125545_048049_05C6A2_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-04-11T12:55:30.618500Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/4/11/IW/DV/S1A_IW_GRDH_1SDV_20230411T125516_20230411T125545_048049_05C6A2_9864/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/4/11/IW/DV/S1A_IW_GRDH_1SDV_20230411T125516_20230411T125545_048049_05C6A2_9864/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230423T125516_20230423T125545_048224_05CC78_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-04-23T12:55:30.830142Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/4/23/IW/DV/S1A_IW_GRDH_1SDV_20230423T125516_20230423T125545_048224_05CC78_AE78/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/4/23/IW/DV/S1A_IW_GRDH_1SDV_20230423T125516_20230423T125545_048224_05CC78_AE78/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230505T125516_20230505T125545_048399_05D258_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-05-05T12:55:31.478609Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/5/5/IW/DV/S1A_IW_GRDH_1SDV_20230505T125516_20230505T125545_048399_05D258_25E0/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/5/5/IW/DV/S1A_IW_GRDH_1SDV_20230505T125516_20230505T125545_048399_05D258_25E0/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230517T125517_20230517T125546_048574_05D7AA_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-05-17T12:55:32.182394Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/5/17/IW/DV/S1A_IW_GRDH_1SDV_20230517T125517_20230517T125546_048574_05D7AA_32C2/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/5/17/IW/DV/S1A_IW_GRDH_1SDV_20230517T125517_20230517T125546_048574_05D7AA_32C2/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230529T125518_20230529T125547_048749_05DCDD_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-05-29T12:55:32.801116Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/5/29/IW/DV/S1A_IW_GRDH_1SDV_20230529T125518_20230529T125547_048749_05DCDD_C49C/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/5/29/IW/DV/S1A_IW_GRDH_1SDV_20230529T125518_20230529T125547_048749_05DCDD_C49C/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230610T125518_20230610T125547_048924_05E228_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-06-10T12:55:33.160599Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/6/10/IW/DV/S1A_IW_GRDH_1SDV_20230610T125518_20230610T125547_048924_05E228_945B/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/6/10/IW/DV/S1A_IW_GRDH_1SDV_20230610T125518_20230610T125547_048924_05E228_945B/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230622T125519_20230622T125548_049099_05E777_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-06-22T12:55:33.682141Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/6/22/IW/DV/S1A_IW_GRDH_1SDV_20230622T125519_20230622T125548_049099_05E777_27BA/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/6/22/IW/DV/S1A_IW_GRDH_1SDV_20230622T125519_20230622T125548_049099_05E777_27BA/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230716T125521_20230716T125550_049449_05F23F_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-07-16T12:55:35.620884Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/7/16/IW/DV/S1A_IW_GRDH_1SDV_20230716T125521_20230716T125550_049449_05F23F_DBB6/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/7/16/IW/DV/S1A_IW_GRDH_1SDV_20230716T125521_20230716T125550_049449_05F23F_DBB6/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230728T125521_20230728T125550_049624_05F79E_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-07-28T12:55:36.177054Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/7/28/IW/DV/S1A_IW_GRDH_1SDV_20230728T125521_20230728T125550_049624_05F79E_01B5/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/7/28/IW/DV/S1A_IW_GRDH_1SDV_20230728T125521_20230728T125550_049624_05F79E_01B5/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230809T125521_20230809T125550_049799_05FD28_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-08-09T12:55:36.088867Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/8/9/IW/DV/S1A_IW_GRDH_1SDV_20230809T125521_20230809T125550_049799_05FD28_5BCB/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/8/9/IW/DV/S1A_IW_GRDH_1SDV_20230809T125521_20230809T125550_049799_05FD28_5BCB/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230821T125522_20230821T125551_049974_060323_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-08-21T12:55:37.260471Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/8/21/IW/DV/S1A_IW_GRDH_1SDV_20230821T125522_20230821T125551_049974_060323_5F2B/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/8/21/IW/DV/S1A_IW_GRDH_1SDV_20230821T125522_20230821T125551_049974_060323_5F2B/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230902T125523_20230902T125552_050149_060927_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-09-02T12:55:38.270469Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/9/2/IW/DV/S1A_IW_GRDH_1SDV_20230902T125523_20230902T125552_050149_060927_CE6A/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/9/2/IW/DV/S1A_IW_GRDH_1SDV_20230902T125523_20230902T125552_050149_060927_CE6A/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230914T125524_20230914T125553_050324_060F12_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-09-14T12:55:38.569291Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/9/14/IW/DV/S1A_IW_GRDH_1SDV_20230914T125524_20230914T125553_050324_060F12_B9A1/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/9/14/IW/DV/S1A_IW_GRDH_1SDV_20230914T125524_20230914T125553_050324_060F12_B9A1/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20230926T125524_20230926T125553_050499_061511_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-09-26T12:55:39.053500Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9999,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/9/26/IW/DV/S1A_IW_GRDH_1SDV_20230926T125524_20230926T125553_050499_061511_539A/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/9/26/IW/DV/S1A_IW_GRDH_1SDV_20230926T125524_20230926T125553_050499_061511_539A/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20231008T125524_20231008T125553_050674_061B12_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-10-08T12:55:39.014550Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9999,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/10/8/IW/DV/S1A_IW_GRDH_1SDV_20231008T125524_20231008T125553_050674_061B12_E318/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/10/8/IW/DV/S1A_IW_GRDH_1SDV_20231008T125524_20231008T125553_050674_061B12_E318/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20231020T125524_20231020T125553_050849_062107_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-10-20T12:55:39.197064Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9999,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/10/20/IW/DV/S1A_IW_GRDH_1SDV_20231020T125524_20231020T125553_050849_062107_E2F2/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/10/20/IW/DV/S1A_IW_GRDH_1SDV_20231020T125524_20231020T125553_050849_062107_E2F2/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20231101T125523_20231101T125553_051024_06270A_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-11-01T12:55:38.499780Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/11/1/IW/DV/S1A_IW_GRDH_1SDV_20231101T125523_20231101T125553_051024_06270A_88BE/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/11/1/IW/DV/S1A_IW_GRDH_1SDV_20231101T125523_20231101T125553_051024_06270A_88BE/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20231113T125524_20231113T125553_051199_062D0F_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-11-13T12:55:38.621606Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/11/13/IW/DV/S1A_IW_GRDH_1SDV_20231113T125524_20231113T125553_051199_062D0F_9AD9/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/11/13/IW/DV/S1A_IW_GRDH_1SDV_20231113T125524_20231113T125553_051199_062D0F_9AD9/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20231125T125523_20231125T125552_051374_063317_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-11-25T12:55:37.798720Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/11/25/IW/DV/S1A_IW_GRDH_1SDV_20231125T125523_20231125T125552_051374_063317_26FC/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/11/25/IW/DV/S1A_IW_GRDH_1SDV_20231125T125523_20231125T125552_051374_063317_26FC/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20231207T125523_20231207T125552_051549_063918_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-12-07T12:55:37.661176Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/12/7/IW/DV/S1A_IW_GRDH_1SDV_20231207T125523_20231207T125552_051549_063918_C440/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/12/7/IW/DV/S1A_IW_GRDH_1SDV_20231207T125523_20231207T125552_051549_063918_C440/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20231219T125522_20231219T125551_051724_063F3C_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2023-12-19T12:55:36.795329Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/12/19/IW/DV/S1A_IW_GRDH_1SDV_20231219T125522_20231219T125551_051724_063F3C_8009/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2023/12/19/IW/DV/S1A_IW_GRDH_1SDV_20231219T125522_20231219T125551_051724_063F3C_8009/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240112T125521_20240112T125550_052074_064B35_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-01-12T12:55:35.678871Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/1/12/IW/DV/S1A_IW_GRDH_1SDV_20240112T125521_20240112T125550_052074_064B35_9A99/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/1/12/IW/DV/S1A_IW_GRDH_1SDV_20240112T125521_20240112T125550_052074_064B35_9A99/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240124T125520_20240124T125549_052249_065114_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-01-24T12:55:35.309020Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/1/24/IW/DV/S1A_IW_GRDH_1SDV_20240124T125520_20240124T125549_052249_065114_F772/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/1/24/IW/DV/S1A_IW_GRDH_1SDV_20240124T125520_20240124T125549_052249_065114_F772/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240229T125520_20240229T125549_052774_0662E9_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-02-29T12:55:34.788347Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/2/29/IW/DV/S1A_IW_GRDH_1SDV_20240229T125520_20240229T125549_052774_0662E9_15C6/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/2/29/IW/DV/S1A_IW_GRDH_1SDV_20240229T125520_20240229T125549_052774_0662E9_15C6/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240312T125520_20240312T125549_052949_0668DE_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-03-12T12:55:34.864599Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/3/12/IW/DV/S1A_IW_GRDH_1SDV_20240312T125520_20240312T125549_052949_0668DE_798A/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/3/12/IW/DV/S1A_IW_GRDH_1SDV_20240312T125520_20240312T125549_052949_0668DE_798A/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240324T125520_20240324T125549_053124_066F69_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-03-24T12:55:35.145682Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/3/24/IW/DV/S1A_IW_GRDH_1SDV_20240324T125520_20240324T125549_053124_066F69_19AD/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/3/24/IW/DV/S1A_IW_GRDH_1SDV_20240324T125520_20240324T125549_053124_066F69_19AD/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240405T125521_20240405T125550_053299_067618_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-04-05T12:55:35.695344Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/4/5/IW/DV/S1A_IW_GRDH_1SDV_20240405T125521_20240405T125550_053299_067618_802A/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/4/5/IW/DV/S1A_IW_GRDH_1SDV_20240405T125521_20240405T125550_053299_067618_802A/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240417T125521_20240417T125550_053474_067D06_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-04-17T12:55:35.992671Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/4/17/IW/DV/S1A_IW_GRDH_1SDV_20240417T125521_20240417T125550_053474_067D06_3E48/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/4/17/IW/DV/S1A_IW_GRDH_1SDV_20240417T125521_20240417T125550_053474_067D06_3E48/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240429T125521_20240429T125550_053649_0683E9_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-04-29T12:55:36.366203Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/4/29/IW/DV/S1A_IW_GRDH_1SDV_20240429T125521_20240429T125550_053649_0683E9_E240/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/4/29/IW/DV/S1A_IW_GRDH_1SDV_20240429T125521_20240429T125550_053649_0683E9_E240/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240511T125521_20240511T125550_053824_068A89_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-05-11T12:55:36.443534Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/5/11/IW/DV/S1A_IW_GRDH_1SDV_20240511T125521_20240511T125550_053824_068A89_9159/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/5/11/IW/DV/S1A_IW_GRDH_1SDV_20240511T125521_20240511T125550_053824_068A89_9159/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240523T125521_20240523T125550_053999_06908E_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-05-23T12:55:36.028511Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/5/23/IW/DV/S1A_IW_GRDH_1SDV_20240523T125521_20240523T125550_053999_06908E_894F/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/5/23/IW/DV/S1A_IW_GRDH_1SDV_20240523T125521_20240523T125550_053999_06908E_894F/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240604T125521_20240604T125550_054174_06969B_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-06-04T12:55:35.729628Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/6/4/IW/DV/S1A_IW_GRDH_1SDV_20240604T125521_20240604T125550_054174_06969B_01E1/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/6/4/IW/DV/S1A_IW_GRDH_1SDV_20240604T125521_20240604T125550_054174_06969B_01E1/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240616T125520_20240616T125549_054349_069CA9_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-06-16T12:55:35.383982Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/6/16/IW/DV/S1A_IW_GRDH_1SDV_20240616T125520_20240616T125549_054349_069CA9_38CF/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/6/16/IW/DV/S1A_IW_GRDH_1SDV_20240616T125520_20240616T125549_054349_069CA9_38CF/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240710T125519_20240710T125548_054699_06A8D5_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-07-10T12:55:34.220541Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/7/10/IW/DV/S1A_IW_GRDH_1SDV_20240710T125519_20240710T125548_054699_06A8D5_B89F/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/7/10/IW/DV/S1A_IW_GRDH_1SDV_20240710T125519_20240710T125548_054699_06A8D5_B89F/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240722T125519_20240722T125548_054874_06AEE3_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-07-22T12:55:33.860479Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/7/22/IW/DV/S1A_IW_GRDH_1SDV_20240722T125519_20240722T125548_054874_06AEE3_E27C/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/7/22/IW/DV/S1A_IW_GRDH_1SDV_20240722T125519_20240722T125548_054874_06AEE3_E27C/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240803T125519_20240803T125548_055049_06B4EE_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-08-03T12:55:33.930521Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/8/3/IW/DV/S1A_IW_GRDH_1SDV_20240803T125519_20240803T125548_055049_06B4EE_E068/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/8/3/IW/DV/S1A_IW_GRDH_1SDV_20240803T125519_20240803T125548_055049_06B4EE_E068/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240815T125519_20240815T125548_055224_06BB4D_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-08-15T12:55:33.598420Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/8/15/IW/DV/S1A_IW_GRDH_1SDV_20240815T125519_20240815T125548_055224_06BB4D_ADAB/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/8/15/IW/DV/S1A_IW_GRDH_1SDV_20240815T125519_20240815T125548_055224_06BB4D_ADAB/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240827T125519_20240827T125548_055399_06C1CC_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-08-27T12:55:34.081250Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9999,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/8/27/IW/DV/S1A_IW_GRDH_1SDV_20240827T125519_20240827T125548_055399_06C1CC_85A6/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/8/27/IW/DV/S1A_IW_GRDH_1SDV_20240827T125519_20240827T125548_055399_06C1CC_85A6/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240908T125519_20240908T125548_055574_06C878_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-09-08T12:55:34.369563Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9999,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/9/8/IW/DV/S1A_IW_GRDH_1SDV_20240908T125519_20240908T125548_055574_06C878_D860/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/9/8/IW/DV/S1A_IW_GRDH_1SDV_20240908T125519_20240908T125548_055574_06C878_D860/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20240920T125520_20240920T125549_055749_06CF5F_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-09-20T12:55:34.690678Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/9/20/IW/DV/S1A_IW_GRDH_1SDV_20240920T125520_20240920T125549_055749_06CF5F_5552/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/9/20/IW/DV/S1A_IW_GRDH_1SDV_20240920T125520_20240920T125549_055749_06CF5F_5552/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20241002T125520_20241002T125549_055924_06D64E_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-10-02T12:55:34.929844Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/10/2/IW/DV/S1A_IW_GRDH_1SDV_20241002T125520_20241002T125549_055924_06D64E_DFCE/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/10/2/IW/DV/S1A_IW_GRDH_1SDV_20241002T125520_20241002T125549_055924_06D64E_DFCE/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20241014T125520_20241014T125549_056099_06DD30_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-10-14T12:55:35.344710Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/10/14/IW/DV/S1A_IW_GRDH_1SDV_20241014T125520_20241014T125549_056099_06DD30_CE0B/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/10/14/IW/DV/S1A_IW_GRDH_1SDV_20241014T125520_20241014T125549_056099_06DD30_CE0B/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20241026T125520_20241026T125549_056274_06E424_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-10-26T12:55:35.033672Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/10/26/IW/DV/S1A_IW_GRDH_1SDV_20241026T125520_20241026T125549_056274_06E424_6241/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/10/26/IW/DV/S1A_IW_GRDH_1SDV_20241026T125520_20241026T125549_056274_06E424_6241/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20241107T125520_20241107T125549_056449_06EB11_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-11-07T12:55:34.895107Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/11/7/IW/DV/S1A_IW_GRDH_1SDV_20241107T125520_20241107T125549_056449_06EB11_B0F2/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/11/7/IW/DV/S1A_IW_GRDH_1SDV_20241107T125520_20241107T125549_056449_06EB11_B0F2/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20241119T125519_20241119T125548_056624_06F215_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-11-19T12:55:34.401831Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/11/19/IW/DV/S1A_IW_GRDH_1SDV_20241119T125519_20241119T125548_056624_06F215_76E2/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/11/19/IW/DV/S1A_IW_GRDH_1SDV_20241119T125519_20241119T125548_056624_06F215_76E2/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20241213T125518_20241213T125547_056974_06FFE6_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-12-13T12:55:32.873244Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/12/13/IW/DV/S1A_IW_GRDH_1SDV_20241213T125518_20241213T125547_056974_06FFE6_0A23/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/12/13/IW/DV/S1A_IW_GRDH_1SDV_20241213T125518_20241213T125547_056974_06FFE6_0A23/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20241225T125516_20241225T125545_057149_0706ED_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2024-12-25T12:55:31.381886Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/12/25/IW/DV/S1A_IW_GRDH_1SDV_20241225T125516_20241225T125545_057149_0706ED_44AB/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2024/12/25/IW/DV/S1A_IW_GRDH_1SDV_20241225T125516_20241225T125545_057149_0706ED_44AB/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250106T125515_20250106T125544_057324_070DCA_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-01-06T12:55:30.376592Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/1/6/IW/DV/S1A_IW_GRDH_1SDV_20250106T125515_20250106T125544_057324_070DCA_B275/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/1/6/IW/DV/S1A_IW_GRDH_1SDV_20250106T125515_20250106T125544_057324_070DCA_B275/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250118T125514_20250118T125543_057499_0714B9_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-01-18T12:55:29.204770Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/1/18/IW/DV/S1A_IW_GRDH_1SDV_20250118T125514_20250118T125543_057499_0714B9_0621/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/1/18/IW/DV/S1A_IW_GRDH_1SDV_20250118T125514_20250118T125543_057499_0714B9_0621/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250130T125514_20250130T125543_057674_071BA5_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-01-30T12:55:28.544156Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/1/30/IW/DV/S1A_IW_GRDH_1SDV_20250130T125514_20250130T125543_057674_071BA5_73AC/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/1/30/IW/DV/S1A_IW_GRDH_1SDV_20250130T125514_20250130T125543_057674_071BA5_73AC/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250211T125513_20250211T125542_057849_0722A5_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-02-11T12:55:28.169982Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/2/11/IW/DV/S1A_IW_GRDH_1SDV_20250211T125513_20250211T125542_057849_0722A5_947E/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/2/11/IW/DV/S1A_IW_GRDH_1SDV_20250211T125513_20250211T125542_057849_0722A5_947E/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250223T125513_20250223T125542_058024_0729C2_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-02-23T12:55:27.923141Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/2/23/IW/DV/S1A_IW_GRDH_1SDV_20250223T125513_20250223T125542_058024_0729C2_817C/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/2/23/IW/DV/S1A_IW_GRDH_1SDV_20250223T125513_20250223T125542_058024_0729C2_817C/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250307T125513_20250307T125542_058199_0730ED_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-03-07T12:55:28.040043Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/3/7/IW/DV/S1A_IW_GRDH_1SDV_20250307T125513_20250307T125542_058199_0730ED_CDEA/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/3/7/IW/DV/S1A_IW_GRDH_1SDV_20250307T125513_20250307T125542_058199_0730ED_CDEA/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250319T125513_20250319T125542_058374_0737D0_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-03-19T12:55:28.175093Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/3/19/IW/DV/S1A_IW_GRDH_1SDV_20250319T125513_20250319T125542_058374_0737D0_7548/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/3/19/IW/DV/S1A_IW_GRDH_1SDV_20250319T125513_20250319T125542_058374_0737D0_7548/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250412T125513_20250412T125542_058724_0745FF_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-04-12T12:55:28.273429Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/4/12/IW/DV/S1A_IW_GRDH_1SDV_20250412T125513_20250412T125542_058724_0745FF_D36F/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/4/12/IW/DV/S1A_IW_GRDH_1SDV_20250412T125513_20250412T125542_058724_0745FF_D36F/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250424T125514_20250424T125543_058899_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-04-24T12:55:28.593585Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/4/24/IW/DV/S1A_IW_GRDH_1SDV_20250424T125514_20250424T125543_058899_074D29_62C5/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/4/24/IW/DV/S1A_IW_GRDH_1SDV_20250424T125514_20250424T125543_058899_074D29_62C5/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250506T125514_20250506T125543_059074_075420_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-05-06T12:55:28.584259Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/5/6/IW/DV/S1A_IW_GRDH_1SDV_20250506T125514_20250506T125543_059074_075420_6356/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/5/6/IW/DV/S1A_IW_GRDH_1SDV_20250506T125514_20250506T125543_059074_075420_6356/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250518T125513_20250518T125542_059249_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-05-18T12:55:28.256614Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/5/18/IW/DV/S1A_IW_GRDH_1SDV_20250518T125513_20250518T125542_059249_075A3B_1B4A/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/5/18/IW/DV/S1A_IW_GRDH_1SDV_20250518T125513_20250518T125542_059249_075A3B_1B4A/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250530T125513_20250530T125542_059424_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-05-30T12:55:27.858004Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/5/30/IW/DV/S1A_IW_GRDH_1SDV_20250530T125513_20250530T125542_059424_076051_B4B8/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/5/30/IW/DV/S1A_IW_GRDH_1SDV_20250530T125513_20250530T125542_059424_076051_B4B8/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250611T125512_20250611T125541_059599_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-06-11T12:55:27.163105Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/6/11/IW/DV/S1A_IW_GRDH_1SDV_20250611T125512_20250611T125541_059599_076647_84AD/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/6/11/IW/DV/S1A_IW_GRDH_1SDV_20250611T125512_20250611T125541_059599_076647_84AD/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250623T125512_20250623T125541_059774_076C55_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-06-23T12:55:26.561492Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/6/23/IW/DV/S1A_IW_GRDH_1SDV_20250623T125512_20250623T125541_059774_076C55_4BAA/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/6/23/IW/DV/S1A_IW_GRDH_1SDV_20250623T125512_20250623T125541_059774_076C55_4BAA/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250705T125511_20250705T125540_059949_07726A_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-07-05T12:55:25.832528Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "SENTINEL-1A",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/7/5/IW/DV/S1A_IW_GRDH_1SDV_20250705T125511_20250705T125540_059949_07726A_F8D1/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/7/5/IW/DV/S1A_IW_GRDH_1SDV_20250705T125511_20250705T125540_059949_07726A_F8D1/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250717T125510_20250717T125539_060124_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-07-17T12:55:25.261072Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9997,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/7/17/IW/DV/S1A_IW_GRDH_1SDV_20250717T125510_20250717T125539_060124_07786D_1EDA/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/7/17/IW/DV/S1A_IW_GRDH_1SDV_20250717T125510_20250717T125539_060124_07786D_1EDA/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250729T125510_20250729T125539_060299_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-07-29T12:55:24.988662Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/7/29/IW/DV/S1A_IW_GRDH_1SDV_20250729T125510_20250729T125539_060299_077E6E_0F7A/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/7/29/IW/DV/S1A_IW_GRDH_1SDV_20250729T125510_20250729T125539_060299_077E6E_0F7A/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250810T125510_20250810T125539_060474_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-08-10T12:55:24.933875Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/8/10/IW/DV/S1A_IW_GRDH_1SDV_20250810T125510_20250810T125539_060474_0784D2_0CD9/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/8/10/IW/DV/S1A_IW_GRDH_1SDV_20250810T125510_20250810T125539_060474_0784D2_0CD9/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250822T125510_20250822T125539_060649_078BB6_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-08-22T12:55:24.988240Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/8/22/IW/DV/S1A_IW_GRDH_1SDV_20250822T125510_20250822T125539_060649_078BB6_7C1D/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/8/22/IW/DV/S1A_IW_GRDH_1SDV_20250822T125510_20250822T125539_060649_078BB6_7C1D/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250903T125510_20250903T125539_060824_07929E_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-09-03T12:55:25.032558Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/9/3/IW/DV/S1A_IW_GRDH_1SDV_20250903T125510_20250903T125539_060824_07929E_6EAD/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/9/3/IW/DV/S1A_IW_GRDH_1SDV_20250903T125510_20250903T125539_060824_07929E_6EAD/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250915T125510_20250915T125539_060999_0799A3_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-09-15T12:55:25.440674Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9999,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/9/15/IW/DV/S1A_IW_GRDH_1SDV_20250915T125510_20250915T125539_060999_0799A3_D7F0/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/9/15/IW/DV/S1A_IW_GRDH_1SDV_20250915T125510_20250915T125539_060999_0799A3_D7F0/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20250927T125511_20250927T125540_061174_07A0A8_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-09-27T12:55:25.514906Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/9/27/IW/DV/S1A_IW_GRDH_1SDV_20250927T125511_20250927T125540_061174_07A0A8_79E3/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/9/27/IW/DV/S1A_IW_GRDH_1SDV_20250927T125511_20250927T125540_061174_07A0A8_79E3/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20251009T125511_20251009T125540_061349_07A7B7_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-10-09T12:55:26.240622Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9999,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/10/9/IW/DV/S1A_IW_GRDH_1SDV_20251009T125511_20251009T125540_061349_07A7B7_7ADC/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/10/9/IW/DV/S1A_IW_GRDH_1SDV_20251009T125511_20251009T125540_061349_07A7B7_7ADC/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20251021T125511_20251021T125540_061524_07AEBF_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-10-21T12:55:25.789403Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/10/21/IW/DV/S1A_IW_GRDH_1SDV_20251021T125511_20251021T125540_061524_07AEBF_423C/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/10/21/IW/DV/S1A_IW_GRDH_1SDV_20251021T125511_20251021T125540_061524_07AEBF_423C/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20251102T125511_20251102T125540_061699_07B5B8_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-11-02T12:55:25.569101Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/11/2/IW/DV/S1A_IW_GRDH_1SDV_20251102T125511_20251102T125540_061699_07B5B8_DE1D/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/11/2/IW/DV/S1A_IW_GRDH_1SDV_20251102T125511_20251102T125540_061699_07B5B8_DE1D/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20251114T125510_20251114T125539_061874_07BC7A_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-11-14T12:55:24.587760Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/11/14/IW/DV/S1A_IW_GRDH_1SDV_20251114T125510_20251114T125539_061874_07BC7A_0DE1/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/11/14/IW/DV/S1A_IW_GRDH_1SDV_20251114T125510_20251114T125539_061874_07BC7A_0DE1/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20251126T125509_20251126T125538_062049_07C351_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-11-26T12:55:23.841008Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/11/26/IW/DV/S1A_IW_GRDH_1SDV_20251126T125509_20251126T125538_062049_07C351_9A1C/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/11/26/IW/DV/S1A_IW_GRDH_1SDV_20251126T125509_20251126T125538_062049_07C351_9A1C/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20251208T125508_20251208T125537_062224_07CA2D_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-12-08T12:55:22.815794Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/12/8/IW/DV/S1A_IW_GRDH_1SDV_20251208T125508_20251208T125537_062224_07CA2D_2945/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/12/8/IW/DV/S1A_IW_GRDH_1SDV_20251208T125508_20251208T125537_062224_07CA2D_2945/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20251220T125507_20251220T125536_062399_07D0F5_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2025-12-20T12:55:21.544120Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/12/20/IW/DV/S1A_IW_GRDH_1SDV_20251220T125507_20251220T125536_062399_07D0F5_8D89/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2025/12/20/IW/DV/S1A_IW_GRDH_1SDV_20251220T125507_20251220T125536_062399_07D0F5_8D89/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260101T125505_20260101T125534_062574_07D7B8_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-01-01T12:55:20.336200Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/1/1/IW/DV/S1A_IW_GRDH_1SDV_20260101T125505_20260101T125534_062574_07D7B8_D732/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/1/1/IW/DV/S1A_IW_GRDH_1SDV_20260101T125505_20260101T125534_062574_07D7B8_D732/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260113T125504_20260113T125533_062749_07DE74_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-01-13T12:55:19.330367Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/1/13/IW/DV/S1A_IW_GRDH_1SDV_20260113T125504_20260113T125533_062749_07DE74_8E9A/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/1/13/IW/DV/S1A_IW_GRDH_1SDV_20260113T125504_20260113T125533_062749_07DE74_8E9A/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260125T125503_20260125T125532_062924_07E4C2_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-01-25T12:55:18.102501Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/1/25/IW/DV/S1A_IW_GRDH_1SDV_20260125T125503_20260125T125532_062924_07E4C2_C969/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/1/25/IW/DV/S1A_IW_GRDH_1SDV_20260125T125503_20260125T125532_062924_07E4C2_C969/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260206T125503_20260206T125532_063099_07EB62_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-02-06T12:55:17.561977Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/2/6/IW/DV/S1A_IW_GRDH_1SDV_20260206T125503_20260206T125532_063099_07EB62_463F/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/2/6/IW/DV/S1A_IW_GRDH_1SDV_20260206T125503_20260206T125532_063099_07EB62_463F/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260218T125502_20260218T125531_063274_07F1ED_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-02-18T12:55:16.988592Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/2/18/IW/DV/S1A_IW_GRDH_1SDV_20260218T125502_20260218T125531_063274_07F1ED_4E36/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/2/18/IW/DV/S1A_IW_GRDH_1SDV_20260218T125502_20260218T125531_063274_07F1ED_4E36/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260302T125502_20260302T125531_063449_07F89A_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-03-02T12:55:16.852734Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/3/2/IW/DV/S1A_IW_GRDH_1SDV_20260302T125502_20260302T125531_063449_07F89A_07AD/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/3/2/IW/DV/S1A_IW_GRDH_1SDV_20260302T125502_20260302T125531_063449_07F89A_07AD/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260314T125502_20260314T125531_063624_07FF41_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-03-14T12:55:16.999605Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/3/14/IW/DV/S1A_IW_GRDH_1SDV_20260314T125502_20260314T125531_063624_07FF41_CA30/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/3/14/IW/DV/S1A_IW_GRDH_1SDV_20260314T125502_20260314T125531_063624_07FF41_CA30/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260326T125502_20260326T125531_063799_0805CA_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-03-26T12:55:17.098680Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/3/26/IW/DV/S1A_IW_GRDH_1SDV_20260326T125502_20260326T125531_063799_0805CA_A25A/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/3/26/IW/DV/S1A_IW_GRDH_1SDV_20260326T125502_20260326T125531_063799_0805CA_A25A/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260407T125502_20260407T125531_063974_080C4A_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-04-07T12:55:17.188519Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/4/7/IW/DV/S1A_IW_GRDH_1SDV_20260407T125502_20260407T125531_063974_080C4A_459E/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/4/7/IW/DV/S1A_IW_GRDH_1SDV_20260407T125502_20260407T125531_063974_080C4A_459E/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260419T125502_20260419T125531_064149_0812DA_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-04-19T12:55:17.255717Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 0.9998,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/4/19/IW/DV/S1A_IW_GRDH_1SDV_20260419T125502_20260419T125531_064149_0812DA_28D1/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/4/19/IW/DV/S1A_IW_GRDH_1SDV_20260419T125502_20260419T125531_064149_0812DA_28D1/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260501T125518_20260501T125548_064324_081956_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-05-01T12:55:33.500812Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 1.0,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/5/1/IW/DV/S1A_IW_GRDH_1SDV_20260501T125518_20260501T125548_064324_081956_C86B/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/5/1/IW/DV/S1A_IW_GRDH_1SDV_20260501T125518_20260501T125548_064324_081956_C86B/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260513T125518_20260513T125547_064499_081FAB_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-05-13T12:55:33.080030Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 1.0,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/5/13/IW/DV/S1A_IW_GRDH_1SDV_20260513T125518_20260513T125547_064499_081FAB_2D67/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/5/13/IW/DV/S1A_IW_GRDH_1SDV_20260513T125518_20260513T125547_064499_081FAB_2D67/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260525T125518_20260525T125547_064674_0825BE_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-05-25T12:55:32.603648Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 1.0,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/5/25/IW/DV/S1A_IW_GRDH_1SDV_20260525T125518_20260525T125547_064674_0825BE_BC39/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/5/25/IW/DV/S1A_IW_GRDH_1SDV_20260525T125518_20260525T125547_064674_0825BE_BC39/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1A_IW_GRDH_1SDV_20260618T125516_20260618T125545_065024_083204_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-06-18T12:55:31.365647Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1a",
+      "epsg": null,
+      "aoi_intersection": 1.0,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/6/18/IW/DV/S1A_IW_GRDH_1SDV_20260618T125516_20260618T125545_065024_083204_382C/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/6/18/IW/DV/S1A_IW_GRDH_1SDV_20260618T125516_20260618T125545_065024_083204_382C/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1D_IW_GRDH_1SDV_20260625T125435_20260625T125505_003393_005F85_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-06-25T12:54:50.437770Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1d",
+      "epsg": null,
+      "aoi_intersection": 1.0,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/6/25/IW/DV/S1D_IW_GRDH_1SDV_20260625T125435_20260625T125505_003393_005F85_9D08/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/6/25/IW/DV/S1D_IW_GRDH_1SDV_20260625T125435_20260625T125505_003393_005F85_9D08/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1D_IW_GRDH_1SDV_20260707T125436_20260707T125505_003568_00656E_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-07-07T12:54:50.992714Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1d",
+      "epsg": null,
+      "aoi_intersection": 1.0,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/7/7/IW/DV/S1D_IW_GRDH_1SDV_20260707T125436_20260707T125505_003568_00656E_FA7E/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/7/7/IW/DV/S1D_IW_GRDH_1SDV_20260707T125436_20260707T125505_003568_00656E_FA7E/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1D_IW_GRDH_1SDV_20260719T125437_20260719T125506_003743_006B65_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-07-19T12:54:51.956127Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1d",
+      "epsg": null,
+      "aoi_intersection": 1.0,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/7/19/IW/DV/S1D_IW_GRDH_1SDV_20260719T125437_20260719T125506_003743_006B65_5C92/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/7/19/IW/DV/S1D_IW_GRDH_1SDV_20260719T125437_20260719T125506_003743_006B65_5C92/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1D_IW_GRDH_1SDV_20260731T125437_20260731T125507_003918_007168_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-07-31T12:54:52.498387Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1d",
+      "epsg": null,
+      "aoi_intersection": 1.0,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/7/31/IW/DV/S1D_IW_GRDH_1SDV_20260731T125437_20260731T125507_003918_007168_1C30/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/7/31/IW/DV/S1D_IW_GRDH_1SDV_20260731T125437_20260731T125507_003918_007168_1C30/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1D_IW_GRDH_1SDV_20260812T125438_20260812T125507_004093_00777A_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-08-12T12:54:53.066942Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1d",
+      "epsg": null,
+      "aoi_intersection": 1.0,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/8/12/IW/DV/S1D_IW_GRDH_1SDV_20260812T125438_20260812T125507_004093_00777A_58BF/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/8/12/IW/DV/S1D_IW_GRDH_1SDV_20260812T125438_20260812T125507_004093_00777A_58BF/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1D_IW_GRDH_1SDV_20260824T125438_20260824T125508_004268_007D9F_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-08-24T12:54:53.624248Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1d",
+      "epsg": null,
+      "aoi_intersection": 1.0,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/8/24/IW/DV/S1D_IW_GRDH_1SDV_20260824T125438_20260824T125508_004268_007D9F_168D/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/8/24/IW/DV/S1D_IW_GRDH_1SDV_20260824T125438_20260824T125508_004268_007D9F_168D/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1D_IW_GRDH_1SDV_20260905T125439_20260905T125508_004443_0083BD_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-09-05T12:54:53.887176Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1d",
+      "epsg": null,
+      "aoi_intersection": 1.0,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/9/5/IW/DV/S1D_IW_GRDH_1SDV_20260905T125439_20260905T125508_004443_0083BD_5965/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/9/5/IW/DV/S1D_IW_GRDH_1SDV_20260905T125439_20260905T125508_004443_0083BD_5965/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    },
+    {
+      "stac_id": "S1D_IW_GRDH_1SDV_20260917T125439_20260917T125509_004618_0089C6_rtc",
+      "collection": "sentinel-1-rtc",
+      "provider": "microsoft-planetary-computer",
+      "sensor": "sentinel-1",
+      "datetime": "2026-09-17T12:54:54.400333Z",
+      "relative_orbit": 27,
+      "orbit_state": "ascending",
+      "platform": "sentinel-1d",
+      "epsg": null,
+      "aoi_intersection": 1.0,
+      "assets": {
+        "VV": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/9/17/IW/DV/S1D_IW_GRDH_1SDV_20260917T125439_20260917T125509_004618_0089C6_B5EF/measurement/iw-vv.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D",
+        "VH": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2026/9/17/IW/DV/S1D_IW_GRDH_1SDV_20260917T125439_20260917T125509_004618_0089C6_B5EF/measurement/iw-vh.rtc.tiff?st=2026-09-19T05%3A40%3A58Z&se=2026-09-20T06%3A25%3A58Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-20T03%3A42%3A06Z&ske=2026-09-27T03%3A42%3A06Z&sks=b&skv=2025-07-05&sig=uKY%2B92rxYf0tE9OBF%2BKvfulFYU/u0TnTkPvGVepWbsU%3D"
+      }
+    }
   ]
 }

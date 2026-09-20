@@ -7,15 +7,15 @@ import time
 import uuid
 from typing import Dict, Any
 from fastapi import APIRouter
-from backend.schemas.query import IngetRequest, IngetResponse
+from backend.schemas.query import IngestRequest, IngestResponse
 
 router = APIRouter(prefix="/ingest", tags=["Ingest"])
 
 _jobs: Dict[str, Dict[str, Any]] = {}
 
 
-@router.post("/scene", response_model=IngetResponse)
-async def ingest_single_scene(request: IngetRequest):
+@router.post("/scene", response_model=IngestResponse)
+async def ingest_single_scene(request: IngestRequest):
     """
     Submits an incremental single-scene ingestion task.
     Returns immediately with job_id. Runs HNSW vector upsert, PostGIS entity match,
@@ -34,7 +34,7 @@ async def ingest_single_scene(request: IngetRequest):
         "vectors_upserted": 14
     }
 
-    return IngetResponse(
+    return IngestResponse(
         job_id=job_id,
         status="PROCESSING",
         estimated_duration_sec=35,

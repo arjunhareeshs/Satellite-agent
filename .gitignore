@@ -44,3 +44,13 @@ data/processed/*.tif
 data/processed/**/*.tif
 *.tar
 *.mbtiles
+data/raw/sentinel1/
+data/raw/sentinel2/
+models/
+*.pt
+*.safetensors
+*.bin
+*.onnx
+*.pth
+*.tsbuildinfo
+

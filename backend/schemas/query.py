@@ -1,4 +1,4 @@
-from typing import List, Optional, Dict, Any, Union
+from typing import List, Optional, Dict, Any, Union, Literal
 from pydantic import BaseModel, Field
 from datetime import datetime
 
@@ -72,6 +72,24 @@ class EntityScores(BaseModel):
     final: float = 0.0
 
 
+class GateResult(BaseModel):
+    """
+    One gate of the five-gate false-alarm cascade (PRD section 7.7).
+
+    fusion.py has always computed these -- `passed`, the measured `metric`, and
+    the `threshold` it was tested against -- and executor.py has always consumed
+    the result. But only the aggregate fusion_score survived into the response,
+    so the frontend had no per-gate truth to render and displayed five
+    unconditional green checks with a hardcoded "All 5 Gates Passed" heading.
+    Carrying the gates through is what lets the evidence panel be honest.
+    """
+
+    name: str
+    passed: bool
+    metric: str = ""
+    threshold: str = ""
+
+
 class EntityEvidence(BaseModel):
     optical: bool = True
     sar: bool = False
@@ -82,6 +100,16 @@ class EntityEvidence(BaseModel):
     registration_residual_px: Optional[float] = 0.18
     cloud_free_pct: Optional[float] = 96.5
     explanation: str = ""
+
+    gates: List[GateResult] = Field(default_factory=list)
+    gates_passed: int = 0
+    gates_total: int = 0
+
+    # How the explanation above was produced, so the UI can label template
+    # output as a template rather than presenting it as model reasoning.
+    explanation_provider: str = ""
+    explanation_model: str = ""
+    explanation_degraded: bool = False
 
 
 class EntityRelations(BaseModel):
@@ -161,7 +189,10 @@ class TimelineResponse(BaseModel):
 
 
 class VerdictRequest(BaseModel):
-    verdict: str = Field(..., description="confirm | reject")
+    # Previously a bare str, so any string was accepted and written to the
+    # audit ledger verbatim -- a typo'd verdict became a permanent, hash-chained
+    # ledger entry with no way to distinguish it from a real confirm/reject.
+    verdict: Literal["confirm", "reject"]
     analyst: str = Field("analyst_01")
     note: Optional[str] = ""
 
@@ -175,12 +206,12 @@ class VerdictResponse(BaseModel):
     message: str
 
 
-class IngetRequest(BaseModel):
+class IngestRequest(BaseModel):
     scene_path: str
     sensor: str = "sentinel-2"
 
 
-class IngetResponse(BaseModel):
+class IngestResponse(BaseModel):
     job_id: str
     status: str
     estimated_duration_sec: int = 45

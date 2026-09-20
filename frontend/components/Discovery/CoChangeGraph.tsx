@@ -1,35 +1,65 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { X, Network, Share2, Layers, Info } from 'lucide-react';
+/**
+ * Previously this component genuinely fetched the real graph
+ * (`GET /discover/co-change`) and stored it in `graphData` -- and then never
+ * read that state anywhere in the render. Every visible number was a
+ * hardcoded literal: "4 Active Geo-Objects", "3 Verified Synchronized
+ * Links", "21 Days", and a community-detection algorithm named "Leiden
+ * Modular" that `backend/engines/clustering.py` does not implement (it does
+ * an O(n^2) pairwise date-diff, no HDBSCAN, no Leiden). The two "clusters"
+ * shown were two static text cards naming specific seed-fixture entity IDs,
+ * with an internal contradiction: "Δt = 24 days" inside a heading that
+ * promised "Δt ≤ 21 Days".
+ *
+ * This renders the graph the backend actually returns: real nodes, real
+ * edges, real Δt, real edge weight, and an honest description of the
+ * algorithm (pairwise temporal proximity, not a named community-detection
+ * method).
+ */
+
+import React, { useMemo, useState } from 'react';
+import { X, Network, Info, AlertTriangle } from 'lucide-react';
+import { useCoChangeGraph } from '@/lib/hooks';
+import type { CoChangeEdge, CoChangeNode } from '@/lib/types';
 
 interface CoChangeGraphProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export const CoChangeGraph: React.FC<CoChangeGraphProps> = ({ isOpen, onClose }) => {
-  const [graphData, setGraphData] = useState<{ nodes: any[]; edges: any[] } | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
+const MAX_WINDOW_DAYS = 21;
+const WIDTH = 620;
+const HEIGHT = 380;
+const RADIUS = 150;
 
-  useEffect(() => {
-    if (!isOpen) return;
-    setIsLoading(true);
-    fetch('/api/v1/discover/co-change?max_window_days=21')
-      .then(res => res.json())
-      .then(data => {
-        setGraphData(data);
-      })
-      .catch(err => console.error("Co-change fetch failed:", err))
-      .finally(() => setIsLoading(false));
-  }, [isOpen]);
+function layoutNodes(nodes: CoChangeNode[]) {
+  const cx = WIDTH / 2;
+  const cy = HEIGHT / 2;
+  return nodes.map((node, i) => {
+    const angle = (i / Math.max(nodes.length, 1)) * 2 * Math.PI - Math.PI / 2;
+    return { node, x: cx + RADIUS * Math.cos(angle), y: cy + RADIUS * Math.sin(angle) };
+  });
+}
+
+export const CoChangeGraph: React.FC<CoChangeGraphProps> = ({ isOpen, onClose }) => {
+  const graph = useCoChangeGraph(MAX_WINDOW_DAYS, isOpen);
+  const [hoverEdge, setHoverEdge] = useState<CoChangeEdge | null>(null);
+
+  const positioned = useMemo(() => layoutNodes(graph.data?.nodes ?? []), [graph.data]);
+  const positionById = useMemo(
+    () => new Map(positioned.map((p) => [p.node.id, p])),
+    [positioned]
+  );
 
   if (!isOpen) return null;
+
+  const nodeCount = graph.data?.nodes.length ?? 0;
+  const edgeCount = graph.data?.edges.length ?? 0;
 
   return (
     <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 select-none">
       <div className="w-full max-w-3xl bg-command-bg border border-cyan-500/40 rounded-xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh] animate-in zoom-in-95 duration-150">
-        {/* Header */}
         <div className="p-4 border-b border-command-cardBorder bg-command-sidebar flex items-center justify-between">
           <div className="flex items-center space-x-2.5">
             <div className="w-7 h-7 rounded bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
@@ -39,11 +69,11 @@ export const CoChangeGraph: React.FC<CoChangeGraphProps> = ({ isOpen, onClose })
               <h3 className="font-mono text-sm font-bold text-slate-100 flex items-center space-x-2">
                 <span>Synchronized Regional Co-Change Graph</span>
                 <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800">
-                  PS 2.2.4 Differentiator
+                  PS 2.2.4
                 </span>
               </h3>
               <p className="text-xs text-slate-400">
-                Surfaces geographically separated sites whose trajectories broke within identical temporal windows.
+                Sites whose trajectories broke within {MAX_WINDOW_DAYS} days of each other, regardless of distance.
               </p>
             </div>
           </div>
@@ -56,86 +86,107 @@ export const CoChangeGraph: React.FC<CoChangeGraphProps> = ({ isOpen, onClose })
           </button>
         </div>
 
-        {/* Graph Body */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           <div className="p-3 rounded bg-cyan-950/20 border border-cyan-800/40 flex items-start space-x-2 text-xs font-sans text-cyan-200">
             <Info className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
             <p>
-              <strong>Operational Intelligence Context: </strong>
-              Semantic search answers what the analyst asked. Co-change detection uncovers what the analyst didn't know to ask — coordinated regional construction and synchronized development campaigns.
+              <strong>Operational context: </strong>
+              Semantic search answers what the analyst asked. This graph surfaces what the
+              analyst didn't know to ask for -- geographically separated sites that changed
+              in the same narrow time window, which is one signal for coordinated activity.
             </p>
           </div>
 
-          {isLoading ? (
+          {graph.isLoading ? (
             <div className="h-64 flex items-center justify-center text-xs font-mono text-slate-500">
               <span className="inline-block w-4 h-4 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin mr-2" />
-              Computing multi-temporal synchronized break matrix...
+              Computing synchronized break matrix...
+            </div>
+          ) : graph.isError ? (
+            <div className="h-64 flex flex-col items-center justify-center gap-2 text-xs font-mono text-red-400">
+              <AlertTriangle className="w-5 h-5" />
+              Could not load the co-change graph.
+            </div>
+          ) : nodeCount === 0 ? (
+            <div className="h-40 flex items-center justify-center text-xs font-mono text-slate-500">
+              No entities with a first_seen date to compare yet.
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {/* Synchronized Clusters */}
-              <div className="p-3 rounded-lg border border-slate-800 bg-command-card space-y-2">
-                <span className="text-xs font-mono font-bold uppercase text-slate-300 block">
-                  Synchronized Temporal Clusters (Δt ≤ 21 Days)
-                </span>
-                <div className="space-y-2">
-                  <div className="p-2 rounded bg-slate-900/80 border border-slate-800 text-xs font-mono">
-                    <div className="flex items-center justify-between text-cyan-300 font-bold">
-                      <span>Cluster #1: Yamuna Corridor Sector 18</span>
-                      <span className="text-[10px] text-emerald-400">Jul–Aug 2024</span>
-                    </div>
-                    <p className="text-[11px] text-slate-400 mt-1">
-                      Linked: BLDG_004281 ⟷ ROAD_001920 (Synchronized construction & road paving)
-                    </p>
-                    <div className="text-[10px] text-slate-500 mt-1">
-                      Temporal closeness: Δt = 24 days | Signature match: 92%
-                    </div>
-                  </div>
+            <>
+              <div className="rounded-lg border border-slate-800 bg-slate-950/60 p-2 overflow-x-auto">
+                <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} className="w-full h-auto min-w-[480px]">
+                  {(graph.data?.edges ?? []).map((edge, i) => {
+                    const a = positionById.get(edge.source);
+                    const b = positionById.get(edge.target);
+                    if (!a || !b) return null;
+                    const isHover = hoverEdge === edge;
+                    return (
+                      <line
+                        key={i}
+                        x1={a.x} y1={a.y} x2={b.x} y2={b.y}
+                        stroke={isHover ? '#22d3ee' : '#0891b2'}
+                        strokeWidth={1 + edge.weight * 3}
+                        strokeOpacity={isHover ? 0.9 : 0.35 + edge.weight * 0.3}
+                        onMouseEnter={() => setHoverEdge(edge)}
+                        onMouseLeave={() => setHoverEdge(null)}
+                        style={{ cursor: 'pointer' }}
+                      />
+                    );
+                  })}
 
-                  <div className="p-2 rounded bg-slate-900/80 border border-slate-800 text-xs font-mono">
-                    <div className="flex items-center justify-between text-cyan-300 font-bold">
-                      <span>Cluster #2: Commercial Outpost Sector 22</span>
-                      <span className="text-[10px] text-emerald-400">Oct–Nov 2024</span>
-                    </div>
-                    <p className="text-[11px] text-slate-400 mt-1">
-                      Linked: BLDG_004282 ⟷ BLDG_004283
-                    </p>
-                    <div className="text-[10px] text-slate-500 mt-1">
-                      Temporal closeness: Δt = 18 days | Signature match: 86%
-                    </div>
-                  </div>
-                </div>
+                  {positioned.map(({ node, x, y }) => (
+                    <g key={node.id}>
+                      <circle cx={x} cy={y} r={7} fill="#0e7490" stroke="#22d3ee" strokeWidth={1.5} />
+                      <text
+                        x={x} y={y - 12} textAnchor="middle"
+                        fill="#94a3b8" fontSize="9" fontFamily="monospace"
+                      >
+                        {node.id}
+                      </text>
+                    </g>
+                  ))}
+                </svg>
               </div>
 
-              {/* Matrix Stats */}
+              {hoverEdge && (
+                <div className="p-2 rounded bg-slate-900/80 border border-cyan-800/50 text-xs font-mono text-slate-300">
+                  <span className="text-cyan-300 font-bold">{hoverEdge.source}</span>
+                  {' ⟷ '}
+                  <span className="text-cyan-300 font-bold">{hoverEdge.target}</span>
+                  <span className="text-slate-500 ml-2">
+                    Δt = {hoverEdge.delta_days}d · weight {hoverEdge.weight.toFixed(2)} · {hoverEdge.common_window}
+                  </span>
+                </div>
+              )}
+
               <div className="p-3 rounded-lg border border-slate-800 bg-command-card text-xs font-mono space-y-2">
-                <span className="font-bold uppercase text-slate-300 block">
-                  Graph Topology Metrics
-                </span>
+                <span className="font-bold uppercase text-slate-300 block">Graph Topology</span>
                 <div className="space-y-1.5 text-slate-300">
                   <div className="flex justify-between border-b border-slate-800 pb-1">
-                    <span className="text-slate-500">Nodes (Entities):</span>
-                    <span className="text-cyan-400">4 Active Geo-Objects</span>
+                    <span className="text-slate-500">Nodes (entities with a break date):</span>
+                    <span className="text-cyan-400">{nodeCount}</span>
                   </div>
                   <div className="flex justify-between border-b border-slate-800 pb-1">
-                    <span className="text-slate-500">Edges (Temporal Synchronization):</span>
-                    <span className="text-cyan-400">3 Verified Synchronized Links</span>
+                    <span className="text-slate-500">Edges (synchronized pairs):</span>
+                    <span className="text-cyan-400">{edgeCount}</span>
                   </div>
                   <div className="flex justify-between border-b border-slate-800 pb-1">
-                    <span className="text-slate-500">Maximum Synchronization Window:</span>
-                    <span className="text-cyan-400">21 Days</span>
+                    <span className="text-slate-500">Synchronization window:</span>
+                    <span className="text-cyan-400">{MAX_WINDOW_DAYS} days</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-slate-500">Community Detection Algorithm:</span>
-                    <span className="text-emerald-400">Leiden Modular</span>
+                    <span className="text-slate-500">Method:</span>
+                    <span className="text-slate-400">
+                      Pairwise temporal proximity + change-type match (no community-detection
+                      algorithm is applied)
+                    </span>
                   </div>
                 </div>
               </div>
-            </div>
+            </>
           )}
         </div>
 
-        {/* Footer */}
         <div className="p-3 border-t border-command-cardBorder bg-command-sidebar flex items-center justify-end">
           <button
             onClick={onClose}

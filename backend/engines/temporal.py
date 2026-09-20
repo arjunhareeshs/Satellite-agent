@@ -174,6 +174,58 @@ class TemporalEngine:
     def get_entity_timeline(self, entity_id: str) -> Optional[List[Dict[str, Any]]]:
         return self._entity_timelines.get(entity_id)
 
+    def estimate_break_from_history(
+        self, trajectory: List[Dict[str, Any]]
+    ) -> Optional[Dict[str, Any]]:
+        """
+        Replay a recorded z-score history through the same CUSUM + backtrack
+        logic CellModel.update() runs online, and return the first detected
+        break.
+
+        This exists so evaluation can compute an independent break-date
+        estimate for an entity that already has a stored trajectory (from
+        register_entity_timeline), without needing the raw per-observation
+        embedding vectors CellModel.update() normally consumes -- the
+        trajectory already carries the z-score each update would have
+        produced. It is the same detector, run over the same numbers, not a
+        second implementation that could disagree with the first.
+
+        Returns None if the trajectory never triggers a break -- which is the
+        correct evaluation input for a stable (no-change) entity, not a
+        fallback value standing in for "no answer".
+        """
+        cusum = 0.0
+        consecutive = 0
+
+        for idx, obs in enumerate(trajectory):
+            if obs.get("valid_fraction", 1.0) < 0.80:
+                continue
+            if idx < MIN_OBS - 1:
+                continue
+
+            z = float(obs.get("z", 0.0))
+            cusum = max(0.0, cusum + z - K_DRIFT)
+
+            if cusum > H_THRESHOLD:
+                consecutive += 1
+                if consecutive >= M_CONSECUTIVE:
+                    i = idx
+                    while i > 0 and trajectory[i - 1].get("z", 0.0) > 1.2:
+                        i -= 1
+                    lower = trajectory[max(0, i - 1)]["date"]
+                    upper = trajectory[i]["date"]
+                    dt_lower = datetime.fromisoformat(lower)
+                    dt_upper = datetime.fromisoformat(upper)
+                    return {
+                        "estimate": upper,
+                        "confidence_interval": [lower, upper],
+                        "interval_days": max(1, (dt_upper - dt_lower).days),
+                    }
+            else:
+                consecutive = 0
+
+        return None
+
     def classify_change(
         self,
         optical_z: float,

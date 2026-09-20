@@ -11,7 +11,6 @@ from backend.core.query_parser import query_parser
 from backend.core.executor import pipeline_executor
 from backend.engines.semantic import semantic_engine
 from backend.engines.spatial import spatial_engine
-from backend.models.encoders import encoders
 
 router = APIRouter(prefix="/search", tags=["Search"])
 
@@ -62,7 +61,17 @@ async def find_similar_imagery(entity_id: str, limit: int = 10):
     if not entity:
         raise HTTPException(status_code=404, detail="Entity not found")
 
-    query_vec = encoders.encode_visual_prithvi(entity_id)
+    # Image-to-image search uses the entity's *stored* visual embedding. The
+    # previous line called encode_visual_prithvi(entity_id) -- passing a string
+    # ID to what is supposed to be an image encoder, which only worked because
+    # that function seeded an RNG from the ID rather than reading pixels.
+    query_vec = semantic_engine.get_visual_vector(entity_id)
+    if query_vec is None:
+        raise HTTPException(
+            status_code=404,
+            detail=f"No visual embedding indexed for {entity_id}. "
+                   f"Run scripts/11_generate_embeddings.py and 12_build_vector_index.py.",
+        )
     similar = semantic_engine.search_visual(query_vec, limit=limit)
     return {
         "query_entity_id": entity_id,

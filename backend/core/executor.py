@@ -16,15 +16,64 @@ from datetime import datetime
 from backend.schemas.query import (
     QueryPlan, SearchResponse, SearchResult, LocationPoint,
     GeoJSONGeometry, EntityScores, EntityEvidence, EntityRelations,
-    EntityImagery, EntityProvenance, ExecutionDetails
+    EntityImagery, EntityProvenance, ExecutionDetails, GateResult
 )
 from backend.engines.spatial import spatial_engine
 from backend.engines.semantic import semantic_engine
 from backend.engines.temporal import temporal_engine
 from backend.engines.fusion import fusion_engine
 from backend.core.ranking import ranking_engine
-from backend.models.encoders import encoders
-from backend.models.vlm import vlm_provider
+from backend.models.encoders import encode_semantic_text
+from backend.models.vlm import explain_candidate as vlm_explain
+from backend.core.manifest import load_manifest
+from backend.core.query_cache import query_result_cache
+
+
+# The real chain the data actually goes through, in order. Stages 07/08 record a
+# per-scene processing_chain, and entities carry it forward; this is the fallback
+# for records written before that field existed.
+DEFAULT_PROCESSING_CHAIN = [
+    "scl_mask",
+    "s2cloudless_refine",
+    "phase_correlation_coregister",
+    "histogram_match",
+    "chip",
+    "segment",
+    "embed",
+]
+
+
+def current_manifest_hash() -> str:
+    """
+    The manifest hash derived from the SHA-256 of the staged model weights.
+
+    Read fresh rather than cached so that restaging a model is reflected without
+    a restart. Returns an empty string when no manifest is present, which is
+    honest -- the previous code returned a 64-character literal that corresponded
+    to no file on disk.
+    """
+    try:
+        return load_manifest().get("manifest_hash", "") or ""
+    except Exception:  # noqa: BLE001
+        return ""
+
+
+def gates_to_results(gate_eval: Dict[str, Any]) -> List[GateResult]:
+    """Flatten fusion.py's gate dict into the ordered list the API returns."""
+    out: List[GateResult] = []
+    for key in sorted(k for k in gate_eval if k.startswith("gate_")):
+        gate = gate_eval[key]
+        if not isinstance(gate, dict):
+            continue
+        out.append(
+            GateResult(
+                name=key,
+                passed=bool(gate.get("passed", False)),
+                metric=str(gate.get("metric", "")),
+                threshold=str(gate.get("threshold", "")),
+            )
+        )
+    return out
 
 
 class PipelineExecutor:
@@ -43,10 +92,12 @@ class PipelineExecutor:
         change_types = plan.change.types if plan.change else None
         min_conf = plan.change.min_confidence if plan.change else 0.50
 
+        primary_target_layer = plan.spatial[0].target_layer if plan.spatial else None
         stage1_ids = spatial_engine.filter_entities(
             entity_type=plan.target.entity_type,
             relation=primary_rel,
             distance_m=primary_dist,
+            target_layer=primary_target_layer,
             from_date=from_date,
             to_date=to_date,
             change_types=change_types,
@@ -60,7 +111,11 @@ class PipelineExecutor:
         # STAGE 2 — SEMANTIC RECALL (Qdrant)
         # -----------------------------------------------------------------
         t0 = time.perf_counter()
-        query_vec = encoders.encode_text_remoteclip(plan.target.semantic_query)
+        # Real RemoteCLIP text tower. The query lands in the same 512-d space as
+        # the entity image embeddings, which is what makes text-to-image
+        # retrieval work; the previous implementation hashed words into bucket
+        # indices and nudged fixed slices for keywords like "building".
+        query_vec = encode_semantic_text([plan.target.semantic_query])[0]
         stage2_results = semantic_engine.search_semantic(
             query_vector=query_vec,
             candidate_ids=stage1_ids if stage1_ids else None,
@@ -74,6 +129,8 @@ class PipelineExecutor:
         # -----------------------------------------------------------------
         t0 = time.perf_counter()
         scored_candidates = []
+        stage_temporal_sec = 0.0
+        stage_fusion_sec = 0.0
 
         for item in stage2_results:
             eid = item["entity_id"]
@@ -82,16 +139,19 @@ class PipelineExecutor:
                 continue
 
             # Temporal scores
+            t_temporal = time.perf_counter()
             change_conf = entity.get("change_confidence", 0.85)
             # Distance relevance (e.g. 1.0 - normalized distance to river)
             river_dist = entity.get("relations", {}).get("river_distance_m", 500)
             spatial_rel = max(0.0, min(1.0, 1.0 - (river_dist / 1000.0)))
+            stage_temporal_sec += time.perf_counter() - t_temporal
 
             # Multi-sensor fusion
             valid_pct = entity.get("valid_fraction", 0.95)
             reg_res = entity.get("registration_residual_px", 0.21)
             sar_confirmed = "sentinel-1" in entity.get("sensors", [])
 
+            t_fusion = time.perf_counter()
             gate_eval = fusion_engine.evaluate_gate_cascade(
                 valid_pixel_fraction=valid_pct,
                 registration_residual_px=reg_res,
@@ -99,6 +159,7 @@ class PipelineExecutor:
                 seasonal_anomaly_z=entity.get("optical_z", 4.2),
                 sar_anomaly_z=entity.get("sar_z", 3.8 if sar_confirmed else 0.5)
             )
+            stage_fusion_sec += time.perf_counter() - t_fusion
 
             # Stage 5: Weighted Ranking
             scores = ranking_engine.compute_score(
@@ -116,8 +177,11 @@ class PipelineExecutor:
                 "sar_confirmed": sar_confirmed
             })
 
-        latencies["temporal"] = round((time.perf_counter() - t0) * 0.6 * 1000.0, 2)
-        latencies["fusion"] = round((time.perf_counter() - t0) * 0.4 * 1000.0, 2)
+        # Previously one elapsed measurement multiplied by 0.6 and 0.4 to invent
+        # two numbers. Both stages now accumulate their own real time inside the
+        # candidate loop, so build_report.json reports measurement.
+        latencies["temporal"] = round(stage_temporal_sec * 1000.0, 2)
+        latencies["fusion"] = round(stage_fusion_sec * 1000.0, 2)
 
         # Sort descending by final score
         scored_candidates.sort(key=lambda x: x["scores"].final, reverse=True)
@@ -134,15 +198,44 @@ class PipelineExecutor:
             scores = cand["scores"]
             gate_eval = cand["gate_eval"]
 
-            # Generate detailed explanation for top N only
-            explanation = ""
+            gate_results = gates_to_results(gate_eval)
+
+            # PRD section 10.1: the model explains, it never searches. Only the
+            # top N reach a provider; everything below gets the deterministic
+            # summary, and either way the response records which was used.
+            explanation_meta: Dict[str, Any] = {}
             if rank_idx <= explain_top_n:
-                explanation = vlm_provider.explain_candidate({
+                evidence_for_vlm = {
                     **e,
-                    "evidence": {"sar": cand["sar_confirmed"]}
-                })
+                    "evidence": {
+                        "sar": cand["sar_confirmed"],
+                        "optical_z": e.get("optical_z"),
+                        "sar_z": e.get("sar_z"),
+                        "registration_residual_px": e.get("registration_residual_px"),
+                        "cloud_free_pct": e.get("cloud_free_pct"),
+                        "observations_after_break": e.get("observations_after_break"),
+                        "gates": [g.model_dump() for g in gate_results],
+                    },
+                }
+                images = [
+                    e.get("imagery", {}).get("before"),
+                    e.get("imagery", {}).get("after"),
+                ]
+                result = vlm_explain(evidence_for_vlm, images=[i for i in images if i])
+                explanation = result.text
+                explanation_meta = result.as_dict()
             else:
-                explanation = f"Detected {e.get('change_type', 'change')} with confidence {e.get('change_confidence', 0.85):.2f}."
+                explanation = (
+                    f"Detected {e.get('change_type', 'change')} with confidence "
+                    f"{e.get('change_confidence', 0.0):.2f}. "
+                    f"{sum(1 for g in gate_results if g.passed)} of "
+                    f"{len(gate_results)} verification gates passed."
+                )
+                explanation_meta = {
+                    "provider": "template",
+                    "model": "rank_summary",
+                    "degraded": False,
+                }
 
             ci = e.get("first_seen_ci", [e.get("first_seen", "2024-08-01"), e.get("first_seen", "2024-08-21")])
             try:
@@ -172,15 +265,24 @@ class PipelineExecutor:
                 confidence=float(e.get("change_confidence", 0.90)),
                 scores=scores,
                 evidence=EntityEvidence(
-                    optical=True,
+                    optical=bool(e.get("optical_confirmed", True)),
                     sar=cand["sar_confirmed"],
-                    temporal_persistence=True,
-                    observations_after_break=e.get("observations_after_break", 6),
-                    optical_z=e.get("optical_z", 4.2),
-                    sar_z=e.get("sar_z", 3.8 if cand["sar_confirmed"] else 0.5),
-                    registration_residual_px=e.get("registration_residual_px", 0.18),
-                    cloud_free_pct=e.get("cloud_free_pct", 96.5),
-                    explanation=explanation
+                    temporal_persistence=bool(e.get("temporal_persistence", True)),
+                    observations_after_break=e.get("observations_after_break", 0),
+                    optical_z=e.get("optical_z"),
+                    sar_z=e.get("sar_z"),
+                    registration_residual_px=e.get("registration_residual_px"),
+                    cloud_free_pct=e.get("cloud_free_pct"),
+                    explanation=explanation,
+                    # The per-gate results fusion.py already computed. Without
+                    # these the evidence panel cannot distinguish a passing gate
+                    # from a failing one and has to hardcode all five as green.
+                    gates=gate_results,
+                    gates_passed=sum(1 for g in gate_results if g.passed),
+                    gates_total=len(gate_results),
+                    explanation_provider=explanation_meta.get("provider", ""),
+                    explanation_model=explanation_meta.get("model", ""),
+                    explanation_degraded=bool(explanation_meta.get("degraded", False)),
                 ),
                 relations=EntityRelations(
                     river_distance_m=e.get("relations", {}).get("river_distance_m"),
@@ -194,10 +296,13 @@ class PipelineExecutor:
                     sar=e.get("imagery", {}).get("sar", "/api/v1/static/chips/sar_sample.png")
                 ),
                 provenance=EntityProvenance(
-                    source_scenes=e.get("source_scenes", ["S2A_MSIL2A_20240821T052651", "S1A_IW_GRDH_20240819"]),
-                    sensors=e.get("sensors", ["sentinel-2", "sentinel-1"]),
-                    processing_chain=["cloud_mask", "coregister", "radiometric_harmonize", "chip", "segment", "embed"],
-                    model_manifest_hash="a3f9c2e817d54b830e2f91bc471d2b86ea92401f85de060a894a735c091e3e7f"
+                    source_scenes=e.get("source_scenes", []),
+                    sensors=e.get("sensors", []),
+                    processing_chain=e.get("processing_chain") or DEFAULT_PROCESSING_CHAIN,
+                    # Read from config/MANIFEST.json, which 00_download_models.py
+                    # derives from the SHA-256 of the staged weights. Previously a
+                    # literal that matched nothing on disk.
+                    model_manifest_hash=current_manifest_hash(),
                 )
             )
             final_results.append(result_item)
@@ -206,8 +311,17 @@ class PipelineExecutor:
         total_time_ms = round((time.perf_counter() - start_total) * 1000.0, 2)
         latencies["total"] = total_time_ms
 
+        query_id = f"q_{uuid.uuid4().hex[:8]}"
+        # Registered so GET /export/{query_id} can return exactly these
+        # entities later, instead of the first 20 rows of the whole archive.
+        query_result_cache.register(
+            query_id,
+            plan.target.semantic_query,
+            [r.entity_id for r in final_results],
+        )
+
         return SearchResponse(
-            query_id=f"q_{uuid.uuid4().hex[:8]}",
+            query_id=query_id,
             query=plan.target.semantic_query,
             plan=plan,
             execution=ExecutionDetails(

@@ -1,8 +1,19 @@
 """
-TRINETRA Master Demo Seed Script.
-Generates realistic Delhi-NCR Yamuna satellite imagery chips, geo-objects,
-harmonic seasonal trajectories, Qdrant vectors, and negative controls.
-Enables instant, zero-dependency offline operation.
+TRINETRA demo seed fixture — development and UI wiring only.
+
+Generates hand-authored Delhi-NCR Yamuna geo-objects, PIL-drawn placeholder
+chips, and harmonic seasonal trajectories so the API and frontend can be
+exercised without the real archive built. It is invoked only by `make seed`;
+`backend/main.py` no longer auto-runs it on startup, because a production
+"intelligence system" that silently fabricates its own evidence on every cold
+boot is exactly the failure mode this whole rewrite exists to remove.
+
+The entity vectors below are deterministic hash-seeded placeholders, NOT
+Prithvi/RemoteCLIP output -- they exist only so semantic_engine.upsert_entity
+has something the right shape to store. Real embeddings come from
+scripts/11_generate_embeddings.py over the real archive. This distinction
+matters: nothing computed from these vectors (similarity scores, clusters)
+should be trusted as evidence, only used to verify the plumbing works.
 """
 import os
 import sys
@@ -19,7 +30,7 @@ from PIL import Image, ImageDraw, ImageFilter
 from backend.engines.spatial import spatial_engine
 from backend.engines.semantic import semantic_engine
 from backend.engines.temporal import temporal_engine, CellModel
-from backend.models.encoders import encoders
+from backend.models.encoders import VISUAL_DIM, SEMANTIC_DIM
 
 
 def generate_chip_images(output_dir: str):
@@ -271,11 +282,26 @@ def seed_all():
     spatial_engine.load_memory_entities(entities)
     print(f"[OK] {len(entities)} core geo-entities loaded into Spatial Engine.")
 
-    # Load vectors into semantic engine & timelines into temporal engine
+    # Load vectors into semantic engine & timelines into temporal engine.
+    #
+    # These are fixture vectors, not model output -- hash-seeded so they are
+    # reproducible across runs, but with no relationship to any pixel. They
+    # let upsert_entity / search_semantic / search_visual be exercised without
+    # loading Prithvi or RemoteCLIP for a demo that has no real imagery anyway.
+    import hashlib as _hashlib
+
+    def _fixture_vector(seed_text: str, dim: int) -> np.ndarray:
+        seed = int(_hashlib.sha256(seed_text.encode("utf-8")).hexdigest(), 16) % (2**32)
+        rng = np.random.default_rng(seed)
+        vec = rng.normal(size=dim).astype(np.float32)
+        return vec / max(float(np.linalg.norm(vec)), 1e-7)
+
     for e in entities:
         eid = e["entity_id"]
-        v_vec = encoders.encode_visual_prithvi(eid)
-        s_vec = encoders.encode_text_remoteclip(f"{e['entity_type']} {e.get('change_type', '')}")
+        v_vec = _fixture_vector("visual:%s" % eid, VISUAL_DIM)
+        s_vec = _fixture_vector(
+            "semantic:%s:%s" % (e["entity_type"], e.get("change_type", "")), SEMANTIC_DIM
+        )
         semantic_engine.upsert_entity(eid, v_vec, s_vec, e)
 
         # Time series trajectory
@@ -285,13 +311,11 @@ def seed_all():
     print("[OK] Entity vectors registered in Qdrant semantic engine.")
     print("[OK] 24-month harmonic trajectories registered in Temporal Engine.")
 
-    # Metadata files
-    meta_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "metadata"))
-    os.makedirs(meta_dir, exist_ok=True)
-    with open(os.path.join(meta_dir, "s2_scenes.json"), "w") as f:
-        json.dump({"total": 58, "aoi": "delhi_ncr_yamuna", "cloud_filtered": True}, f, indent=2)
-    with open(os.path.join(meta_dir, "s1_scenes.json"), "w") as f:
-        json.dump({"total": 36, "aoi": "delhi_ncr_yamuna", "polarizations": ["VV", "VH"]}, f, indent=2)
+    # Deliberately does NOT touch data/metadata/s2_scenes.json or
+    # s1_scenes.json. Those are the real search manifests scripts 03 and 05
+    # write; a previous version of this function overwrote them with
+    # {"total": 58, ...} / {"total": 36, ...} stubs containing zero scene IDs,
+    # which is how the archive statistics ended up fabricated end to end.
 
     print("==================================================")
     print("Seed Complete! All systems ready for offline demo.")

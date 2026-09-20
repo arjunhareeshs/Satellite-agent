@@ -25,8 +25,19 @@ module.exports = {
       fontFamily: {
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
         sans: ['Inter', 'system-ui', 'sans-serif']
-      }
+      },
+      // `animate-spin-slow` is used by Header/Map compass icons but is not
+      // one of Tailwind's built-in spin speeds and was previously undefined
+      // -- referencing it silently did nothing.
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
     },
   },
-  plugins: [],
+  // tailwindcss-animate supplies `animate-in`, `slide-in-from-right`,
+  // `zoom-in-95` and friends, used by EvidencePanel's drawer,
+  // CoChangeGraph/SimilarSites modals, and the map basemap-status pill. None
+  // of these classes existed anywhere in this project before, so every
+  // "animated" entrance was in fact instant with no transition at all.
+  plugins: [require('tailwindcss-animate')],
 }

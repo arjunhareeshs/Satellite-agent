@@ -1,54 +1,20 @@
 'use client';
 
 import React from 'react';
-import { Eye, Radio, CheckCircle2, Waves, Calendar } from 'lucide-react';
+import { Eye, Waves, Calendar } from 'lucide-react';
+import type { SearchResult } from '@/lib/types';
 
-export interface SearchResultItem {
-  rank: number;
-  entity_id: string;
-  entity_type: string;
-  location: { lat: number; lon: number };
-  area_m2: number;
-  change_type: string;
-  first_seen: string;
-  first_seen_ci: string[];
-  ci_width_days: number;
-  confidence: number;
-  scores: {
-    semantic: number;
-    visual: number;
-    temporal: number;
-    spatial: number;
-    sensor: number;
-    final: number;
-  };
-  evidence: {
-    optical: boolean;
-    sar: boolean;
-    temporal_persistence: boolean;
-    observations_after_break: number;
-    optical_z: number;
-    sar_z: number;
-    registration_residual_px: number;
-    cloud_free_pct: number;
-    explanation: string;
-  };
-  relations: {
-    river_distance_m?: number;
-    road_distance_m?: number;
-  };
-  imagery: {
-    before: string;
-    after: string;
-    sar?: string;
-  };
-  provenance: {
-    source_scenes: string[];
-    sensors: string[];
-    processing_chain: string[];
-    model_manifest_hash: string;
-  };
-}
+/**
+ * Re-exported from the canonical type in lib/types.ts, not redefined here.
+ *
+ * The hand-written version previously in this file was missing `geometry`
+ * entirely (the backend always sends a Polygon; the map discarded it because
+ * its own type didn't know the field existed) and had a narrower `relations`
+ * and `evidence` shape than the backend actually returns -- in particular it
+ * had no `gates` field, which is why EvidenceChecklist had nothing real to
+ * render and hardcoded "All 5 Gates Passed" instead.
+ */
+export type SearchResultItem = SearchResult;
 
 interface ResultCardProps {
   result: SearchResultItem;
@@ -81,9 +47,15 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, isSelected, onSe
 
         {/* Dual-Witness Chips */}
         <div className="flex items-center space-x-1.5 text-[10px] font-mono">
-          <span className="flex items-center text-emerald-400 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-900/40">
-            ✓opt
-          </span>
+          {result.evidence.optical ? (
+            <span className="flex items-center text-emerald-400 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-900/40">
+              ✓opt
+            </span>
+          ) : (
+            <span className="text-slate-500 bg-slate-900 px-1 py-0.5 rounded">
+              opt-
+            </span>
+          )}
           {result.evidence.sar ? (
             <span className="flex items-center text-cyan-400 bg-cyan-950/60 px-1.5 py-0.5 rounded border border-cyan-900/40 font-semibold">
               ✓sar
@@ -108,7 +80,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, isSelected, onSe
           </span>
         </div>
 
-        {result.relations.river_distance_m !== undefined && (
+        {result.relations.river_distance_m != null && (
           <div className="flex items-center space-x-1 text-slate-300">
             <Waves className="w-3 h-3 text-cyan-500/80" />
             <span>{Math.round(result.relations.river_distance_m)} m from river</span>

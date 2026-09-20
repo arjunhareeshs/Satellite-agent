@@ -2,17 +2,16 @@
 
 import React from 'react';
 import { Activity, Calendar } from 'lucide-react';
+import type { TimelinePoint } from '@/lib/types';
 
-export interface TrajectoryPoint {
-  t: string;
-  observed_embed_norm: number;
-  baseline_embed_norm: number;
-  residual: number;
-  z_score: number;
-  valid_fraction: number;
-  sensor: string;
-  ndvi?: number;
-  sar_vv_db?: number;
+/** Re-exported from lib/types.ts; kept as an alias so existing imports of
+ * `TrajectoryPoint` from this file keep working. */
+export type TrajectoryPoint = TimelinePoint;
+
+function formatTick(iso: string): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso.slice(0, 7);
+  return d.toLocaleDateString('en-US', { month: 'short', year: '2-digit' });
 }
 
 interface TrajectoryChartProps {
@@ -61,9 +60,40 @@ export const TrajectoryChart: React.FC<TrajectoryChartProps> = ({
   if (breakIdx === -1) breakIdx = Math.floor(n * 0.4);
   const breakX = getX(breakIdx);
 
-  // Shaded confidence interval band
-  const ciStartX = Math.max(padX, breakX - 24);
-  const ciEndX = Math.min(width - padX, breakX + 6);
+  // Shaded confidence interval band, positioned from the real CI bounds.
+  //
+  // Previously this was `breakX - 24` / `breakX + 6` -- a fixed pixel offset
+  // with no relationship to breakDateCi or ciWidthDays, so the shaded "Break
+  // CI Range" did not represent the interval it claimed to. Finding the
+  // nearest trajectory index to each bound and mapping through the same
+  // getX() used for every other point keeps it consistent with the axis.
+  const nearestIndexToDate = (iso: string): number => {
+    let best = 0;
+    let bestDiff = Infinity;
+    trajectory.forEach((p, i) => {
+      const diff = Math.abs(new Date(p.t).getTime() - new Date(iso).getTime());
+      if (diff < bestDiff) {
+        bestDiff = diff;
+        best = i;
+      }
+    });
+    return best;
+  };
+
+  const ciLowIdx = breakDateCi[0] ? nearestIndexToDate(breakDateCi[0]) : Math.max(0, breakIdx - 1);
+  const ciHighIdx = breakDateCi[1] ? nearestIndexToDate(breakDateCi[1]) : breakIdx;
+  const ciStartX = Math.min(getX(ciLowIdx), getX(ciHighIdx));
+  const ciEndX = Math.max(getX(ciLowIdx), getX(ciHighIdx));
+
+  // X-axis ticks from the trajectory's actual dates, not fixed labels at
+  // fixed fractions of the plot width regardless of what dates are plotted.
+  const tickCount = Math.min(5, n);
+  const tickIndices = Array.from({ length: tickCount }, (_, i) =>
+    Math.round((i / Math.max(tickCount - 1, 1)) * (n - 1))
+  );
+
+  const yTickCount = 4;
+  const yTicks = Array.from({ length: yTickCount + 1 }, (_, i) => minVal + (i / yTickCount) * (maxVal - minVal));
 
   return (
     <div className="bg-command-card border border-command-cardBorder rounded-lg p-3">
@@ -84,10 +114,19 @@ export const TrajectoryChart: React.FC<TrajectoryChartProps> = ({
       {/* SVG Chart */}
       <div className="relative w-full overflow-x-auto bg-slate-950/90 rounded border border-slate-800/80 p-1">
         <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto min-w-[500px]">
-          {/* Grid lines */}
-          <line x1={padX} y1={padY} x2={width - padX} y2={padY} stroke="#1e293b" strokeDasharray="3 3" />
-          <line x1={padX} y1={padY + plotH / 2} x2={width - padX} y2={padY + plotH / 2} stroke="#1e293b" strokeDasharray="3 3" />
-          <line x1={padX} y1={padY + plotH} x2={width - padX} y2={padY + plotH} stroke="#334155" />
+          {/* Grid lines + real Y-axis labels (magnitude of the visual embedding norm) */}
+          {yTicks.map((val, i) => (
+            <g key={i}>
+              <line
+                x1={padX} y1={getY(val)} x2={width - padX} y2={getY(val)}
+                stroke={i === 0 || i === yTickCount ? '#334155' : '#1e293b'}
+                strokeDasharray={i === 0 || i === yTickCount ? undefined : '3 3'}
+              />
+              <text x={padX - 6} y={getY(val) + 3} fill="#64748b" fontSize="8" fontFamily="monospace" textAnchor="end">
+                {val.toFixed(2)}
+              </text>
+            </g>
+          ))}
 
           {/* Shaded confidence interval band */}
           <rect
@@ -127,7 +166,10 @@ export const TrajectoryChart: React.FC<TrajectoryChartProps> = ({
             points={obsPoints}
           />
 
-          {/* Observation data nodes */}
+          {/* Observation data nodes, with a native tooltip carrying the real
+              per-observation values (date, z-score, sensor, valid fraction)
+              -- z_score, ndvi and sar_vv_db previously existed on every point
+              and were never surfaced anywhere in this chart. */}
           {trajectory.map((p, i) => (
             <circle
               key={i}
@@ -137,15 +179,29 @@ export const TrajectoryChart: React.FC<TrajectoryChartProps> = ({
               fill={i >= breakIdx ? "#22d3ee" : "#38bdf8"}
               stroke="#0f172a"
               strokeWidth="1"
-            />
+            >
+              <title>
+                {p.t} · {p.sensor} · z={p.z_score.toFixed(2)} · valid={(p.valid_fraction * 100).toFixed(0)}%
+                {p.ndvi != null ? ` · NDVI=${p.ndvi.toFixed(2)}` : ''}
+                {p.sar_vv_db != null ? ` · VV=${p.sar_vv_db.toFixed(1)}dB` : ''}
+              </title>
+            </circle>
           ))}
 
-          {/* Labels */}
-          <text x={padX} y={height - 6} fill="#64748b" fontSize="9" fontFamily="monospace">Jan 24</text>
-          <text x={padX + plotW * 0.25} y={height - 6} fill="#64748b" fontSize="9" fontFamily="monospace">Jul 24</text>
-          <text x={padX + plotW * 0.50} y={height - 6} fill="#64748b" fontSize="9" fontFamily="monospace">Jan 25</text>
-          <text x={padX + plotW * 0.75} y={height - 6} fill="#64748b" fontSize="9" fontFamily="monospace">Jul 25</text>
-          <text x={width - padX - 25} y={height - 6} fill="#64748b" fontSize="9" fontFamily="monospace">Dec 25</text>
+          {/* X-axis labels from the trajectory's actual observation dates. */}
+          {tickIndices.map((idx, i) => (
+            <text
+              key={i}
+              x={getX(idx)}
+              y={height - 6}
+              fill="#64748b"
+              fontSize="9"
+              fontFamily="monospace"
+              textAnchor={i === 0 ? 'start' : i === tickIndices.length - 1 ? 'end' : 'middle'}
+            >
+              {formatTick(trajectory[idx].t)}
+            </text>
+          ))}
 
           {/* Break label */}
           <text x={breakX - 30} y={padY - 8} fill="#22d3ee" fontSize="10" fontFamily="monospace" fontWeight="bold">

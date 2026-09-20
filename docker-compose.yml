@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   postgis:
     image: postgis/postgis:16-3.4
@@ -35,14 +33,72 @@ services:
       retries: 5
     restart: unless-stopped
 
+  # Profile-gated: previously this had no profile and `restart: unless-stopped`,
+  # so `make up` started it unconditionally and it crash-looped forever, because
+  # `data/raw/basemap/delhi_ncr.mbtiles` does not exist until the offline
+  # basemap is generated (PRD section 11.4, not yet automated) and tileserver-gl
+  # exits immediately without an mbtiles to serve. `docker compose up -d`
+  # (no --profile flag) now starts only the two datastores; bring this up
+  # explicitly once a basemap exists with:
+  #   docker compose --profile basemap up -d tileserver
   tileserver:
     image: maptiler/tileserver-gl:v4.11.0
     container_name: trinetra_tileserver
+    profiles: ["basemap"]
     ports:
       - "8081:8080"
     volumes:
       - ./data/raw/basemap:/data
     command: ["--mbtiles", "/data/delhi_ncr.mbtiles", "--verbose"]
+    restart: unless-stopped
+
+  # Neither of these existed in the original compose file -- the backend and
+  # frontend were only ever run directly on the host via `make run-backend` /
+  # `make run-frontend`. Profile-gated the same way: local dev keeps using the
+  # Makefile targets (faster iteration, no image rebuild per change); bring
+  # these up for a containerized deployment with:
+  #   docker compose --profile app up -d
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: trinetra_backend
+    profiles: ["app"]
+    depends_on:
+      postgis:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    environment:
+      POSTGRES_HOST: postgis
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: trinetra_db
+      POSTGRES_USER: trinetra
+      POSTGRES_PASSWORD: trinetra_secure_password
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: "6333"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./config:/app/config
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ""
+    container_name: trinetra_frontend
+    profiles: ["app"]
+    depends_on:
+      - backend
+    environment:
+      BACKEND_INTERNAL_URL: http://backend:8000
+    ports:
+      - "3000:3000"
     restart: unless-stopped
 
 volumes:

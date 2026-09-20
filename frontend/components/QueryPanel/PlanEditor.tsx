@@ -1,31 +1,20 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Sliders, Play, Check, Edit3, ShieldAlert } from 'lucide-react';
+import { Sliders, Play } from 'lucide-react';
+import type { QueryPlan } from '@/lib/types';
 
-export interface QueryPlanDSL {
-  task: string;
-  target: {
-    entity_type: string;
-    semantic_query: string;
-    attributes: Record<string, any>;
-  };
-  spatial: Array<{
-    relation: string;
-    distance_m: number;
-    target_layer?: string;
-  }>;
-  temporal?: {
-    field: string;
-    from: string;
-    to: string;
-  };
-  change?: {
-    types: string[];
-    min_confidence: number;
-  };
-  limit: number;
-}
+/**
+ * Re-exported from lib/types.ts, not redefined here.
+ *
+ * The hand-written version previously in this file omitted `aoi` and
+ * `sensors` entirely. Object spreads (`{ ...plan, ... }`) throughout this
+ * component meant those fields usually survived at runtime regardless, but
+ * `handleExecutePlan` in app/page.tsx did NOT spread the prior plan when
+ * building the request -- it really did drop them on re-execute. Fixed there;
+ * fixed here by making the type honest so it can't happen again.
+ */
+export type QueryPlanDSL = QueryPlan;
 
 interface PlanEditorProps {
   initialPlan: QueryPlanDSL | null;
@@ -97,9 +86,14 @@ export const PlanEditor: React.FC<PlanEditorProps> = ({ initialPlan, onExecutePl
               <select
                 value={plan.spatial[0]?.relation || 'near_water'}
                 onChange={(e) => {
+                  // Preserve every other field on the existing predicate --
+                  // in particular target_layer, which a from-scratch object
+                  // literal here previously dropped on every edit, silently
+                  // reverting an analyst's explicit "ref_water" / "ref_roads"
+                  // choice back to the relation's default layer.
                   const newSpatial = [...plan.spatial];
-                  if (!newSpatial[0]) newSpatial[0] = { relation: 'near_water', distance_m: 500 };
-                  newSpatial[0].relation = e.target.value;
+                  const current = newSpatial[0] ?? { relation: 'near_water', distance_m: 500 };
+                  newSpatial[0] = { ...current, relation: e.target.value };
                   setPlan({ ...plan, spatial: newSpatial });
                 }}
                 className="w-1/2 bg-slate-950 border border-slate-800 rounded px-2 py-1 text-slate-200 focus:outline-none focus:border-cyan-500"
@@ -112,11 +106,11 @@ export const PlanEditor: React.FC<PlanEditorProps> = ({ initialPlan, onExecutePl
               <div className="w-1/2 flex items-center bg-slate-950 border border-slate-800 rounded px-2 py-1">
                 <input
                   type="number"
-                  value={plan.spatial[0]?.distance_m || 500}
+                  value={plan.spatial[0]?.distance_m ?? 500}
                   onChange={(e) => {
                     const newSpatial = [...plan.spatial];
-                    if (!newSpatial[0]) newSpatial[0] = { relation: 'near_water', distance_m: 500 };
-                    newSpatial[0].distance_m = Number(e.target.value);
+                    const current = newSpatial[0] ?? { relation: 'near_water', distance_m: 500 };
+                    newSpatial[0] = { ...current, distance_m: Number(e.target.value) };
                     setPlan({ ...plan, spatial: newSpatial });
                   }}
                   className="w-full bg-transparent text-slate-200 focus:outline-none text-right pr-1"
@@ -172,9 +166,29 @@ export const PlanEditor: React.FC<PlanEditorProps> = ({ initialPlan, onExecutePl
                   <option value="expansion">Expansion</option>
                 </select>
 
-                <div className="w-2/5 flex items-center justify-end space-x-1 bg-slate-950 border border-slate-800 rounded px-1.5 py-1">
+                <div className="w-2/5 flex items-center justify-end space-x-1.5 bg-slate-950 border border-slate-800 rounded px-1.5 py-1">
                   <span className="text-[10px] text-slate-400">≥</span>
-                  <span className="text-cyan-400 font-bold">{Math.round((plan.change.min_confidence || 0.6) * 100)}%</span>
+                  {/*
+                    Previously display-only text -- the analyst could see the
+                    threshold but never actually change ChangeConstraint's
+                    min_confidence from the UI. A real range input now writes
+                    it back into the plan like every other field here does.
+                  */}
+                  <input
+                    type="range"
+                    min={0}
+                    max={100}
+                    step={5}
+                    value={Math.round((plan.change.min_confidence ?? 0.6) * 100)}
+                    onChange={(e) => setPlan({
+                      ...plan,
+                      change: { ...plan.change!, min_confidence: Number(e.target.value) / 100 }
+                    })}
+                    className="w-14 accent-cyan-500"
+                  />
+                  <span className="text-cyan-400 font-bold w-9 text-right">
+                    {Math.round((plan.change.min_confidence ?? 0.6) * 100)}%
+                  </span>
                 </div>
               </div>
             </div>
